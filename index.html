@@ -5,40 +5,44 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
+<!--ХЕДЕР-->
     <header class="page-header container">
-      <div class="header-logo">
-        <p>DEVICE</p>
-      </div>
-      <form class="site-search">
+<!--Логотип - некликабельная ссылка-->
+      <a class="header-logo">DEVICE<a>
+<!--Форма поиска по сайту-->
+      <form class="site-search" action="/echo" method="post">
         <input type="search" placeholder="Поиск по сайту">
         <button type="submit">Найти</button>
       </form>
-      <div class="enter">
+<!--Ссылки для входа на сайт, сравнения выбранных товаров и просмотра корзины-->
+      <div class="enter-compare-cart">
         <a href="#">Войти</a>
-      </div>
-      <div class="compare">
         <a href="#">Сравнить</a>
-      </div>
-      <div class="cart">
         <a href="#">Корзина</a>
       </div>
-      <ul class="main-nav">
-        <li><a href="#">Каталог товаров</a>
-          <ul class="main-nav-catalog">
-            <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="#">Моноподы для селфи</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
-            <li><a href="#">Фитнес-браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
-            <li><a href="#">Квадрокоптеры</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
+<!--Основное навигационное меню-->
+      <nav>
+        <ul class="mainmenu">
+          <li><a class="mainmenu-link" href="#">Каталог товаров</a>
+<!--Вложенное меню, выпадающее при нажатии на пункт "Каталог товаров"-->
+            <ul class="submenu">
+              <li><a class="submenu-link" href="#">Виртуальная реальность</a></li>
+              <li><a class="submenu-link" href="catalog-monopodes.html">Моноподы для селфи</a></li>
+              <li><a class="submenu-link" href="#">Экшн-камеры</a></li>
+              <li><a class="submenu-link" href="#">Фитнес-браслеты</a></li>
+              <li><a class="submenu-link" href="#">Умные часы</a></li>
+              <li><a class="submenu-link" href="#">Квадрокоптеры</a></li>
+            </ul>
+<!--Конец вложенного меню-->
+          </li>
+          <li><a class="mainmenu-link" href="#">Доставка</a></li>
+          <li><a class="mainmenu-link" href="#">Гарантия</a></li>
+          <li><a class="mainmenu-link" href="#">Контакты</a></li>
+        </ul>
+      <nav>
+<!--Конец основного навигационного меню  -->
     </header>
-
+<!--Конец ХЕДЕРА-->
 
 
     <main>
