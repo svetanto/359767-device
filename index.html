@@ -7,50 +7,55 @@
   </head>
   <body>
 <!--ХЕДЕР-->
-    <header class="page-header container">
+    <header class="page-header">
 <!--Логотип - некликабельная ссылка-->
-      <a class="header-logo">DEVICE</a>
-<!--Форма поиска по сайту-->
-      <form class="site-search" action="/echo" method="post">
-        <input type="search" placeholder="Поиск по сайту" name="search">
-        <button type="submit">Найти</button>
-      </form>
-<!--Ссылки для входа на сайт, сравнения выбранных товаров и просмотра корзины-->
-      <div class="actions">
-        <div class="login-state">
-          <a class="actions-not-logged" href="#">Войти</a>
-        </div>
-        <a class="actions-compare" href="#">Сравнить</a>
-        <a class="actions-cart" href="#">Корзина</a>
-      </div>
-<!--Основное навигационное меню-->
-      <nav>
-        <ul class="mainmenu">
-          <li><a class="mainmenu-link" href="#">Каталог товаров</a>
-<!--Вложенное меню, выпадающее при нажатии на пункт "Каталог товаров"-->
-          <li>
-            <div class="submenu-wrapper">
-              <ul class="submenu">
-                <li><a class="submenu-link" href="#">Виртуальная реальность</a></li>
-                <li><a class="submenu-link" href="catalog-monopodes.html">Моноподы для селфи</a></li>
-                <li><a class="submenu-link" href="#">Экшн-камеры</a></li>
-              </ul>
-              <ul class="submenu">
-                <li><a class="submenu-link" href="#">Фитнес-браслеты</a></li>
-                <li><a class="submenu-link" href="#">Умные часы</a></li>
-              </ul>
-              <ul class="submenu">
-                <li><a class="submenu-link" href="#">Квадрокоптеры</a></li>
-              </ul>
+
+      <div class="container">
+        <a class="device-logo on-header-logo">DEVICE</a>
+        <div class="yellow-header-wrapper">
+          <div class="upper-string">
+    <!--Форма поиска по сайту-->
+            <form class="site-search" action="/echo" method="post">
+              <input type="search" placeholder="Поиск по сайту" name="search">
+              <button type="submit">Найти</button>
+            </form>
+    <!--Ссылки для входа на сайт, сравнения выбранных товаров и просмотра корзины-->
+            <div class="login-state">
+              <a class="actions-not-logged" href="#">Войти</a>
             </div>
-          </li>
-<!--Конец вложенного меню-->
-          <li><a class="mainmenu-link" href="#">Доставка</a></li>
-          <li><a class="mainmenu-link" href="#">Гарантия</a></li>
-          <li><a class="mainmenu-link" href="#">Контакты</a></li>
-        </ul>
-      </nav>
-<!--Конец основного навигационного меню  -->
+            <a class="actions-compare" href="#">Сравнить</a>
+            <a class="actions-cart" href="#">Корзина</a>
+          </div>
+    <!--Основное навигационное меню-->
+          <nav>
+            <ul class="mainmenu">
+              <li>
+                <a class="mainmenu-link" href="#">Каталог товаров</a>
+    <!--Вложенное меню, выпадающее при нажатии на пункт "Каталог товаров"-->
+                <div class="submenu-wrapper">
+                  <ul class="submenu">
+                    <li><a class="submenu-link" href="#">Виртуальная реальность</a></li>
+                    <li><a class="submenu-link" href="catalog-monopodes.html">Моноподы для селфи</a></li>
+                    <li><a class="submenu-link" href="#">Экшн-камеры</a></li>
+                  </ul>
+                  <ul class="submenu">
+                    <li><a class="submenu-link" href="#">Фитнес-браслеты</a></li>
+                    <li><a class="submenu-link" href="#">Умные часы</a></li>
+                  </ul>
+                  <ul class="submenu">
+                    <li><a class="submenu-link" href="#">Квадрокоптеры</a></li>
+                  </ul>
+                </div>
+              </li>
+    <!--Конец вложенного меню-->
+              <li><a class="mainmenu-link" href="#">Доставка</a></li>
+              <li><a class="mainmenu-link" href="#">Гарантия</a></li>
+              <li><a class="mainmenu-link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+  <!--Конец основного навигационного меню  -->
+        </div>
+      </div>
     </header>
 
 <!--ОСНОВНОЙ БЛОК-->
@@ -119,22 +124,40 @@
 <!--Блок "Популярное"-->
         <ul class="popular">
           <li>
-            <a href="#">Виртуальная реальность</a>
+            <a href="#">
+              <div class="popular-icon"></div>
+              <p>Виртуальная реальность<p>
+            </a>
           </li>
           <li>
-            <a href="catalog-monopodes.html">Моноподы для селфи</a>
+            <a href="catalog-monopodes.html">
+              <div class="popular-icon"></div>
+              <p>Моноподы для селфи</p>
+          </a>
           </li>
           <li>
-            <a href="#">Экшн-камеры</a>
+            <a href="#">
+              <div class="popular-icon"></div>
+              <p>Экшн-камеры</p>
+            </a>
           </li>
           <li>
-            <a href="#">Фитнес-браслеты</a>
+            <a href="#">
+              <div class="popular-icon"></div>
+              <p>Фитнес-браслеты</p>
+            </a>
           </li>
           <li>
-            <a href="#">Умные часы</a>
+            <a href="#">
+              <div class="popular-icon"></div>
+              <p>Умные часы</p>
+            </a>
           </li>
           <li>
-            <a href="#">Квадрокоптеры</a>
+            <a href="#">
+              <div class="popular-icon"></div>
+              <p>Квадрокоптеры</p>
+            </a>
           </li>
         </ul>
 
@@ -175,86 +198,89 @@
 
 <!--Блок "Логотипы"-->
       <div class="container">
-        <div class="logotypes">
-          <ul>
-            <li>
-              <a class="logotype" href="#"><img src="img/dji-logo.png" alt="dji" width="260" height="100"></a>
-            </li>
-            <li>
-              <a class="logotype" href="#"><img src="img/spgadgets-logo.png" alt="SP Gadgets" width="260" height="100"></a>
-            </li>
-            <li>
-              <a class="logotype" href="#"><img class="logotype" src="img/gopro-logo.png" alt="GoPro" width="260" height="100"></a>
-            </li>
-            <li>
-              <a class="logotype" href="#"><img class="logotype" src="img/vive-logo.png" alt="Vive" width="260" height="100"></a>
-            </li>
-          </ul>
+        <ul class="logotypes">
+          <li>
+            <a class="logotype" href="#"><img src="img/dji-logo.png" alt="dji" width="260" height="100"></a>
+          </li>
+          <li>
+            <a class="logotype" href="#"><img src="img/spgadgets-logo.png" alt="SP Gadgets" width="260" height="100"></a>
+          </li>
+          <li>
+            <a class="logotype" href="#"><img class="logotype" src="img/gopro-logo.png" alt="GoPro" width="260" height="100"></a>
+          </li>
+          <li>
+            <a class="logotype" href="#"><img class="logotype" src="img/vive-logo.png" alt="Vive" width="260" height="100"></a>
+          </li>
+        </ul>
+
+        <div class="info-contacts-wrapper">
+<!--Блок "О нас"-->
+          <section class="info">
+            <h2>О нас</h2>
+            <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+            <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+            <ul>
+              <li>Деловые Линии</li>
+    	        <li>Автотрейдинг</li>
+    	        <li>ЖелДорЭкспедиция</li>
+            </ul>
+            <a class="btn" href="#">Подробнее о нас</a>
+          </section>
+
+  <!--Блок "Контакты"-->
+          <section class="contacts">
+            <h2>Контакты</h2>
+            <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+            <a class="map" href="#">
+              <img src="img/map.jpg" alt="Местоположение офиса" width="560" height="222">
+            </a>
+  <!--Это ссылка, открывающая модальное окно с формой связи.-->
+            <a class="btn write-us" href="#">Напишите нам</a>
+          </section>
         </div>
 
-<!--Блок "О нас"-->
-        <section class="info">
-          <h2>О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-          <ul>
-            <li>Деловые Линии</li>
-  	        <li>Автотрейдинг</li>
-  	        <li>ЖелДорЭкспедиция</li>
-          </ul>
-          <a class="btn" href="#">Подробнее о нас</a>
-        </section>
-
-<!--Блок "Контакты"-->
-        <section class="contacts">
-          <h2>Контакты</h2>
-          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <a class="map" href="#">
-            <img src="img/map.jpg" alt="Местоположение офиса" width="560" height="222">
-          </a>
-<!--Это ссылка, открывающая модальное окно с формой связи.-->
-          <a class="btn write-us" href="#">Напишите нам</a>
-        </section>
       </div>
     </main>
 
 <!--ФУТЕР-->
     <footer class="page-footer">
       <div class="container">
-        <div class="left-footer">
-          <a class="footer-logo">DEVICE</a>
-          <p>г. Москва, ул. Строителей, 15</p>
-        </div>
-        <div class="center-footer">
-          <ul>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантии</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-          <div class="footer-social">
+        <div class="footer-wrapper">
+          <div class="left-footer">
+            <a class="device-logo on-footer-logo">DEVICE</a>
+            <p>г. Москва, ул. Строителей, 15</p>
+          </div>
+          <div class="center-footer">
             <ul>
-              <li>
-                <a class="social-btn facebook" href="https://facebook.com/device">Фейсбук</a>
-              </li>
-              <li>
-                <a class="social-btn instagram" href="https://instagram.com/device">Инстаграм</a>
-              </li>
-              <li>
-                <a class="social-btn tweeter" href="https://tweeter.com/device">Твитер</a>
-              </li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Гарантии</a></li>
+              <li><a href="#">Контакты</a></li>
             </ul>
-          </div>
-        </div>
-        <div class="right-footer">
-          <div class="actions-footer">
-            <div class="login-state">
-              <a class="actions-not-logged" href="#">Войти</a>
+            <div class="footer-social">
+              <ul>
+                <li>
+                  <a class="social-btn facebook" href="https://facebook.com/device">Фейсбук</a>
+                </li>
+                <li>
+                  <a class="social-btn instagram" href="https://instagram.com/device">Инстаграм</a>
+                </li>
+                <li>
+                  <a class="social-btn tweeter" href="https://tweeter.com/device">Твитер</a>
+                </li>
+              </ul>
             </div>
-            <a class="actions-compare" href="#">Сравнить</a>
-            <a class="actions-cart" href="#">Корзина</a>
           </div>
-          <p>Тел.: +7 (495) 495-95-95</p>
-          <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss"></a>
+          <div class="right-footer">
+            <div class="actions-footer">
+              <div class="login-state">
+                <a class="actions-not-logged" href="#">Войти</a>
+              </div>
+              <a class="actions-compare" href="#">Сравнить</a>
+              <a class="actions-cart" href="#">Корзина</a>
+            </div>
+            <p>Тел.: +7 (495) 495-95-95</p>
+            <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss"></a>
+          </div>
         </div>
       </div>
     </footer>

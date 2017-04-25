@@ -1,0 +1,284 @@
+@import "http://fonts.fontstorage.com/import/opensans.css";
+@import "http://fonts.fontstorage.com/import/gilroy.css";
+
+html,
+body {
+  min-width: 1342px;
+  min-height: 2830px;
+  margin: 0;
+  padding: 0;
+}
+/*Базовые текстовые стили */
+body {
+  font-size: 25px;
+  line-height: 30px;
+  color: #464646;
+  font-weight: 300;
+  font-family: 'Open Sans', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+.slide-text h2,
+.services-slide h2,
+.info h2,
+.contacts h2 {
+  font-size: 47px;
+  color: black;
+  font-weight: 800;
+  font-family: 'Gilroy', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+.device-logo {
+  font-size: 48px;
+  color: black;
+  font-weight: 800;
+  font-family: 'Gilroy', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+/*Позиционирование логотипа на хедере*/
+.on-header-logo {
+  position: relative;
+  top: 25px;
+  left: 58px;
+}
+/*Спрятанное подменю*/
+.submenu-wrapper {
+  display: none;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+/*Желтая подложка хедера*/
+.yellow-header-wrapper {
+  width: 1160px;
+  height: 264px;
+  margin: 0 auto;
+  margin-top: 5px;
+  padding: 0;
+  padding-top: 35px;
+  background-color: #f7e296;
+  margin-bottom: 480px;
+}
+/*Оформление блока ссылок на хедере*/
+.upper-string {
+  display: flex;
+  margin-bottom: 40px;
+}
+.site-search {
+  width: 520px;
+  margin-left: 60px;
+}
+.login-state {
+  width: 200px;
+  margin-left: 20px;
+}
+.actions-compare,
+.actions-cart {
+  width: 100px;
+}
+.actions-compare {
+  margin-left: 80px;
+}
+.actions-cart {
+  margin-left: 40px;
+}
+/*Оформление блока главного меню на хедере*/
+.mainmenu {
+  display: flex;
+  list-style: none;
+}
+.mainmenu li:nth-child(1) {
+  margin-left: 30px;
+}
+.mainmenu li:nth-child(2) {
+  margin-left: 340px;
+}
+.mainmenu li:nth-child(3) {
+  margin-left: 40px;
+}
+.mainmenu li:nth-child(4) {
+  margin-left: 120px;
+}
+
+/*Спрятанный слайдер*/
+.slider {
+  display: none;
+}
+
+/*Блок популярных товаров*/
+.popular {
+  margin: 0;
+  padding: 0;
+  width: 1160px;
+  height: 240px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 18px;
+  margin-bottom: 565px;
+}
+.popular-icon {
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
+}
+.popular p {
+  width: 160px;
+}
+
+/*Спрятанный слайдер услуг*/
+.services {
+  display: none;
+}
+/*Блок логотипы*/
+
+.logotypes {
+  margin: 0;
+  padding: 0;
+  width: 1160px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 120px;
+}
+.logotype {
+  width: 260px;
+}
+
+/*Блок инфо+контакты*/
+.info-contacts-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 1160px;
+  height: 585px;
+  display: flex;
+  margin-bottom: 45px;
+}
+.contacts {
+  margin-left: 35px;
+}
+
+/*Футер*/
+.page-footer {
+  background-color: #464646;
+  color: white;
+}
+.footer-wrapper {
+  margin: 0;
+  padding: 50px 0;
+  width: 1160px;
+  height: 323px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.left-footer {
+  width: 260px;
+}
+.center-footer {
+  width: 440px;
+}
+.center-footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.actions-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-footer {
+  width: 330px;
+}
+
+.on-footer-logo {
+  color: #ffc600;
+}
+
+.write-us-window {
+  display: none;
+}
+/*======================================
+ Системное оформление - не изменять
+=======================================
+
+body {
+  padding: 3px;
+}
+
+body > *,
+body > * > *,
+body > * > * > * {
+  position: relative;
+}
+
+body > *::before,
+body > * > *::before,
+body > * > * > *::before {
+  content: "";
+  position: absolute;
+
+  height: 24px;
+  padding: 2px 5px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Courier New", monotype;
+  white-space: nowrap;
+}
+
+body > *::before {
+  top: -3px;
+  left: -3px;
+}
+
+body > * > *::before {
+  top: -3px;
+  left: -3px;
+}
+
+body > * > * > *::before {
+  top: 0;
+  left: 0;
+}
+
+body > * {
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: 0 0 0 3px green;
+}
+
+body > *::before {
+  color: white;
+
+  background: green;
+}
+
+body > * > * {
+  background: rgba(255, 45, 82, 0.2);
+  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+
+body > * > *::before {
+  color: white;
+
+  background: rgb(255, 45, 82);
+}
+
+.page-header::before {
+  content: ".page-header";
+}
+
+.container::before {
+  content: ".container";
+}
+
+.page-header .container::before {
+  top: auto;
+  bottom: -28px;
+}
+*/
