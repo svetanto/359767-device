@@ -6,55 +6,53 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-<!--ХЕДЕР-->
-    <header class="page-header">
-<!--Логотип - некликабельная ссылка-->
+    <!--ХЕДЕР-->
+    <header class="page-header container">
 
-      <div class="container">
+      <!--Желтая подложка хедера-->
+      <div class="yellow-header-wrapper">
+        <!--Логотип - некликабельная ссылка-->
         <a class="device-logo on-header-logo">DEVICE</a>
-        <div class="yellow-header-wrapper">
-          <div class="upper-string">
-    <!--Форма поиска по сайту-->
-            <form class="site-search" action="/echo" method="post">
-              <input type="search" placeholder="Поиск по сайту" name="search">
-              <button type="submit">Найти</button>
-            </form>
-    <!--Ссылки для входа на сайт, сравнения выбранных товаров и просмотра корзины-->
-            <div class="login-state">
-              <a class="actions-not-logged" href="#">Войти</a>
-            </div>
-            <a class="actions-compare" href="#">Сравнить</a>
-            <a class="actions-cart" href="#">Корзина</a>
-          </div>
-    <!--Основное навигационное меню-->
-          <nav>
-            <ul class="mainmenu">
-              <li>
-                <a class="mainmenu-link" href="#">Каталог товаров</a>
-    <!--Вложенное меню, выпадающее при нажатии на пункт "Каталог товаров"-->
-                <div class="submenu-wrapper">
-                  <ul class="submenu">
-                    <li><a class="submenu-link" href="#">Виртуальная реальность</a></li>
-                    <li><a class="submenu-link" href="catalog-monopodes.html">Моноподы для селфи</a></li>
-                    <li><a class="submenu-link" href="#">Экшн-камеры</a></li>
-                  </ul>
-                  <ul class="submenu">
-                    <li><a class="submenu-link" href="#">Фитнес-браслеты</a></li>
-                    <li><a class="submenu-link" href="#">Умные часы</a></li>
-                  </ul>
-                  <ul class="submenu">
-                    <li><a class="submenu-link" href="#">Квадрокоптеры</a></li>
-                  </ul>
-                </div>
-              </li>
-    <!--Конец вложенного меню-->
-              <li><a class="mainmenu-link" href="#">Доставка</a></li>
-              <li><a class="mainmenu-link" href="#">Гарантия</a></li>
-              <li><a class="mainmenu-link" href="#">Контакты</a></li>
-            </ul>
-          </nav>
-  <!--Конец основного навигационного меню  -->
+        <!--Блок ссылок-->
+        <div class="upper-string">
+          <!--Форма поиска по сайту-->
+          <form class="site-search" action="/echo" method="post">
+            <input type="search" placeholder="Поиск по сайту" name="search">
+            <button type="submit">Найти</button>
+          </form>
+          <!--Ссылки для входа на сайт, сравнения выбранных товаров и просмотра корзины-->
+          <a class="actions-not-logged" href="#">Войти</a>
+          <a class="actions-compare" href="#">Сравнить</a>
+          <a class="actions-cart" href="#">Корзина</a>
         </div>
+        <!--Основное навигационное меню-->
+        <nav>
+          <ul class="mainmenu">
+            <li>
+              <a class="mainmenu-link" href="#">Каталог товаров</a>
+  <!--Вложенное меню, выпадающее при нажатии на пункт "Каталог товаров"-->
+              <div class="submenu-wrapper">
+                <ul class="submenu">
+                  <li><a class="submenu-link" href="#">Виртуальная реальность</a></li>
+                  <li><a class="submenu-link" href="catalog-monopodes.html">Моноподы для селфи</a></li>
+                  <li><a class="submenu-link" href="#">Экшн-камеры</a></li>
+                </ul>
+                <ul class="submenu">
+                  <li><a class="submenu-link" href="#">Фитнес-браслеты</a></li>
+                  <li><a class="submenu-link" href="#">Умные часы</a></li>
+                </ul>
+                <ul class="submenu">
+                  <li><a class="submenu-link" href="#">Квадрокоптеры</a></li>
+                </ul>
+              </div>
+            </li>
+  <!--Конец вложенного меню-->
+            <li><a class="mainmenu-link" href="#">Доставка</a></li>
+            <li><a class="mainmenu-link" href="#">Гарантия</a></li>
+            <li><a class="mainmenu-link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+  <!--Конец основного навигационного меню  -->
       </div>
     </header>
 
