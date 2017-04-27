@@ -1,6 +1,37 @@
-@import "http://fonts.fontstorage.com/import/opensans.css";
-@import "http://fonts.fontstorage.com/import/gilroy.css";
-
+/*Подключение шрифта OpenSans в начертаниях Light и Normal из локальной папки проекта*/
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Light'), local('OpenSans-Light'),
+      url('../fonts/opensans/opensanslight.woff2') format('woff2'),
+      url('../fonts/opensans/opensanslight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans'), local('OpenSans'),
+      url('../fonts/opensans/opensans.woff2') format('woff2'),
+      url('../fonts/opensans/opensans.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+/*Подключение шрифта Gilroy в начертаниях Light и ExtraBold из локальной папки проекта*/
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Light'), local('Gilroy-Light'),
+      url('../fonts/gilroy/Gilroylight.woff2') format('woff2'),
+      url('../fonts/gilroy/Gilroylight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
+      url('../fonts/gilroy/Gilroyextrabold.woff2') format('woff2'),
+      url('../fonts/gilroy/Gilroyextrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
 html,
 body {
   min-width: 1342px;
@@ -10,7 +41,7 @@ body {
 }
 /*Базовые текстовые стили */
 body {
-  font-size: 25px;
+  font-size: 15px;
   line-height: 30px;
   color: #464646;
   font-weight: 300;
@@ -22,6 +53,7 @@ body {
 .info h2,
 .contacts h2 {
   font-size: 47px;
+  line-height: 1.2em;
   color: black;
   font-weight: 800;
   font-family: 'Gilroy', Arial, sans-serif;
@@ -41,21 +73,22 @@ body {
   padding: 0 20px;
 }
 /*Желтая подложка хедера*/
-.yellow-header-wrapper {
+.header-wrapper {
+  position: relative;
   background-color: #f7e296;
   margin-top: 40px;
+  padding-top: 43px;
 }
 /*Позиционирование логотипа на хедере*/
 .on-header-logo {
-  position: relative;
+  position: absolute;
   top: -15px;
   left: 58px;
 }
 /*Оформление блока ссылок на хедере*/
 .upper-string {
   display: flex;
-  margin-top: 7px;
-  margin-bottom: 31px;
+  margin-bottom: 35px;
 }
 .upper-string a {
   text-decoration: none;
@@ -66,53 +99,48 @@ body {
   width: 520px;
   margin-left: 60px;
 }
-.actions-not-logged {
+[class^="actions-"]::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 7px;
+  background: url("../img/icon-sprite.png") no-repeat;
+}
+[class^="actions-"] {
   position: relative;
+}
+.actions-not-logged {
   width: 200px;
   margin-left: 46px;
 }
 .actions-not-logged::before {
-  content: "";
-  position: absolute;
+  background-position: -16px;
   left: -28px;
-  top: 7px;
-  width: 16px;
-  height: 16px;
-  background: url("../img/icon-sprite.png") no-repeat -16px;
 }
 .actions-compare,
 .actions-cart {
-  position: relative;
   width: 100px;
 }
 .actions-compare {
   margin-left: 81px;
 }
 .actions-compare::before {
-  content: "";
-  position: absolute;
   left: -26px;
-  top: 7px;
-  width: 16px;
-  height: 16px;
-  background: url("../img/icon-sprite.png") no-repeat -32px;
+  background-position: -32px;
 }
 .actions-cart {
   margin-left: 33px;
 }
 .actions-cart::before {
-  content: "";
-  position: absolute;
   left: -26px;
-  top: 7px;
-  width: 16px;
-  height: 16px;
-  background: url("../img/icon-sprite.png") no-repeat -48px;
+  background-position: -48px;
 }
 /*Оформление блока главного меню на хедере*/
 .mainmenu {
   display: flex;
   list-style: none;
+  margin-bottom: 0;
 }
 .mainmenu-link {
   text-decoration: none;
@@ -147,8 +175,6 @@ body {
 .mainmenu li:nth-child(4) {
   margin-left: 108px;
 }
-
-
 /*Спрятанное подменю*/
 .submenu-wrapper {
   display: none;
@@ -159,9 +185,43 @@ body {
 
 
 /*Спрятанный слайдер*/
-.slider {
+.slides {
+  position: relative;
+  height: 641px;
+  background-image: linear-gradient(#f7e296 0%, #f7e296 25%, transparent 25%, transparent 100%);
+  /*background-color: rgba(255, 0, 0, 0.5);*/
+}
+.slide-image {
+  position: absolute;
+  top: 47px;
+  left: 24px;
+}
+.slide-text {
+  position: absolute;
+  top: 90px;
+  left: 600px;
+  width: 485px;
+}
+.slide-text h2 {
+  margin-bottom: 20px;
+}
+.slide-text p {
+  margin-top: 0;
+}
+
+.slides .slide:nth-child(1) {
+  display: block;
+}
+.slides .slide:nth-child(2) {
   display: none;
 }
+.slides .slide:nth-child(3) {
+  display: none;
+}
+.slide-switch {
+  display: none;
+}
+
 
 /*Блок популярных товаров*/
 .popular {
@@ -175,12 +235,9 @@ body {
   font-size: 18px;
   margin-bottom: 565px;
 }
-.popular-icon {
-  width: 160px;
-  height: 160px;
-  background-color: #f7e296;
-}
-.popular p {
+
+.popular a {
+  display: block;
   width: 160px;
 }
 
@@ -202,6 +259,7 @@ body {
 }
 .logotype {
   width: 260px;
+  height: 100px;
 }
 
 /*Блок инфо+контакты*/
