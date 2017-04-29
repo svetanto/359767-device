@@ -32,6 +32,7 @@
     font-weight: 800;
     font-style: normal;
 }
+/*Задание минимальной ширины и высоты страницы, обнуление отступов*/
 html,
 body {
   min-width: 1342px;
@@ -48,6 +49,7 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
   letter-spacing: 0.01em;
 }
+.catalog-upper-block h1,
 .slide-text h2,
 .services-slide h2,
 .info h2,
@@ -72,7 +74,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-/*Желтая подложка хедера*/
+/*Подложка хедера (с фоном)*/
 .header-wrapper {
   position: relative;
   background-color: #f7e296;
@@ -88,7 +90,7 @@ body {
 /*Оформление блока ссылок на хедере*/
 .upper-string {
   display: flex;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 }
 .upper-string a {
   text-decoration: none;
@@ -109,28 +111,32 @@ body {
 }
 [class^="actions-"] {
   position: relative;
+  flex-shrink: 0;
+  /*background-color: rgba(255, 0, 0, 0.5);*/
 }
-.actions-not-logged {
-  width: 200px;
-  margin-left: 46px;
+.actions-login {
+  flex-basis: 250px;
+  margin-left: 45px;
 }
-.actions-not-logged::before {
+.actions-login::before {
   background-position: -16px;
   left: -28px;
 }
-.actions-compare,
-.actions-cart {
-  width: 100px;
+.logged {
+  margin-left: 20px;
 }
+
 .actions-compare {
-  margin-left: 81px;
+  flex-basis: 100px;
+  margin-left: 33px;
 }
 .actions-compare::before {
   left: -26px;
   background-position: -32px;
 }
 .actions-cart {
-  margin-left: 33px;
+  flex-basis: 100px;
+  margin-left: 31px;
 }
 .actions-cart::before {
   left: -26px;
@@ -158,8 +164,8 @@ body {
 .mainmenu li:nth-child(1)::after {
   content: "+";
   position: absolute;
-  left: 228px;
-  top: 4px;
+  left: 229px;
+  top: 1px;
   font-size: 39px;
   color: black;
   opacity: 0.3;
@@ -279,6 +285,7 @@ body {
 .page-footer {
   background-color: #464646;
   color: white;
+  clear: both;
 }
 .footer-wrapper {
   margin: 0;
@@ -316,83 +323,71 @@ body {
 .write-us-window {
   display: none;
 }
-/*======================================
- Системное оформление - не изменять
-=======================================
-
-body {
-  padding: 3px;
+/*------------------------------------------------------------------------------ Стили страницы каталога ---------------*/
+/*Основной блок страницы каталога*/
+.breadcrumbs li {
+  display: inline-block;
+}
+/*Обертка заголовка блока фильтров и блока выбранных товаров с кнопками сортировки с градиентным фоном*/
+.filter-sort-header {
+  height: 70px;
+  background-image: linear-gradient(to right, #dcdcdc 0%, #dcdcdc 40.1%, #ebebeb 40.1%, #ebebeb 100%);
+}
+/*Заголовок блока фильтров и блока выбранных товаров с кнопками сортировки*/
+.filter-sort-header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.sort {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin-left: 200px;
+}
+/*Обертка блока фильтров и выбранных товаров с градиентным фоном*/
+.main-wrapper {
+  display: flex;
+  background-image: linear-gradient(to right, #eeeeee 0%, #eeeeee 40.1%, #ffffff 40.1%, #ffffff 100%);
+  padding-top: 72px;
+}
+/*Блок фильтров и выбранных товаров*/
+.main-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
+.filters {
+  margin-left: 60px;
+  width: 200px;
+  /*background-color: rgba(255, 0, 0, 0.5);*/
+}
+.selected-items {
+  width: 760px;
+  /*background-color: rgba(255, 0, 0, 0.5);*/
+}
+.item-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.item-card {
+  width: 360px;
+}
+/*Блок навигации по страницам выбранных товаров*/
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eeeeee;
+  margin-top: 50px;
+  margin-bottom: 73px;
+}
+.choose-page {
+  display: flex;
+  list-style: none;
 }
 
-body > *,
-body > * > *,
-body > * > * > * {
-  position: relative;
+
+/*Спрятанные pop-up над карточками товара*/
+.item-card-overlay {
+  display: none;
 }
-
-body > *::before,
-body > * > *::before,
-body > * > * > *::before {
-  content: "";
-  position: absolute;
-
-  height: 24px;
-  padding: 2px 5px;
-
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: "Courier New", monotype;
-  white-space: nowrap;
-}
-
-body > *::before {
-  top: -3px;
-  left: -3px;
-}
-
-body > * > *::before {
-  top: -3px;
-  left: -3px;
-}
-
-body > * > * > *::before {
-  top: 0;
-  left: 0;
-}
-
-body > * {
-  background: rgba(0, 128, 0, 0.2);
-  box-shadow: 0 0 0 3px green;
-}
-
-body > *::before {
-  color: white;
-
-  background: green;
-}
-
-body > * > * {
-  background: rgba(255, 45, 82, 0.2);
-  box-shadow: 0 0 0 3px rgb(255, 45, 82);
-}
-
-body > * > *::before {
-  color: white;
-
-  background: rgb(255, 45, 82);
-}
-
-.page-header::before {
-  content: ".page-header";
-}
-
-.container::before {
-  content: ".container";
-}
-
-.page-header .container::before {
-  top: auto;
-  bottom: -28px;
-}
-*/

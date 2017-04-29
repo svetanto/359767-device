@@ -21,8 +21,10 @@
             <input type="search" placeholder="Поиск по сайту" name="search">
             <button type="submit">Найти</button>
           </form>
-          <!--Ссылки для входа на сайт, сравнения выбранных товаров и просмотра корзины-->
-          <a class="actions-not-logged" href="#">Войти</a>
+          <!--Ссылки для входа в авторизованный режим, сравнения выбранных товаров и просмотра корзины-->
+          <div class="actions-login">
+            <a class="not-logged" href="#">Войти</a>
+          </div>
           <a class="actions-compare" href="#">Сравнить</a>
           <a class="actions-cart" href="#">Корзина</a>
         </div>
@@ -31,7 +33,7 @@
           <ul class="mainmenu">
             <li>
               <a class="mainmenu-link" href="#">Каталог товаров</a>
-  <!--Вложенное меню, выпадающее при нажатии на пункт "Каталог товаров"-->
+              <!--Вложенное меню, выпадающее при нажатии на пункт "Каталог товаров"-->
               <div class="submenu-wrapper">
                 <ul class="submenu">
                   <li><a class="submenu-link" href="#">Виртуальная реальность</a></li>
@@ -47,26 +49,26 @@
                 </ul>
               </div>
             </li>
-  <!--Конец вложенного меню-->
+            <!--Конец вложенного меню-->
             <li><a class="mainmenu-link" href="#">Доставка</a></li>
             <li><a class="mainmenu-link" href="#">Гарантия</a></li>
             <li><a class="mainmenu-link" href="#">Контакты</a></li>
           </ul>
         </nav>
-  <!--Конец основного навигационного меню  -->
+        <!--Конец основного навигационного меню  -->
       </div>
     </header>
 
-<!--ОСНОВНОЙ БЛОК-->
+    <!--ОСНОВНОЙ БЛОК-->
     <main>
       <div class="container">
-<!--Блок верхних слайдов-->
+        <!--Блок верхних слайдов-->
         <div class="slider">
           <input class="slide-switch" type="radio" name="slide-switch" value="1" id="slide-switch1">
           <input class="slide-switch" type="radio" name="slide-switch" value="2" id="slide-switch2">
           <input class="slide-switch" type="radio" name="slide-switch" value="3" id="slide-switch3">
           <div class="slides">
-<!--Слайд 1-->
+            <!--Слайд 1-->
             <div class="slide">
               <div class="slide-image">
                 <img src="img/slide-1.png" alt="Палка для селфи" width="537" height="507">
@@ -82,7 +84,7 @@
                 </ul>
               </div>
             </div>
-<!--Слайд 2-->
+            <!--Слайд 2-->
             <div class="slide">
               <div class="slide-image">
                 <img src="img/slide-2.png" alt="Фитнес-браслет" width="537" height="507">
@@ -96,7 +98,7 @@
                 </ul>
               </div>
             </div>
-<!--Слайд 3-->
+            <!--Слайд 3-->
             <div class="slide">
               <div class="slide-image">
                 <img src="img/slide-3.png" alt="Квадрокоптер" width="537" height="507">
@@ -111,7 +113,7 @@
                 </ul>
               </div>
             </div>
-<!--Блок меток для переключения слайдов-->
+            <!--Блок меток для переключения слайдов-->
             <div class="slide-labels">
               <label for="slide-switch1"></label>
               <label for="slide-switch2"></label>
@@ -120,7 +122,7 @@
           </div>
         </div>
 
-<!--Блок "Популярное"-->
+        <!--Блок "Популярное"-->
         <ul class="popular">
           <li>
             <a href="#">Виртуальная реальность</a>
@@ -144,15 +146,15 @@
 
       </div>
 
-<!--Блок "Услуги" состоит из трех переключающихся по кнопкам слева слайдов "Доставка", "Гарантия" и "Кредит"-->
+      <!--Блок "Услуги" состоит из трех переключающихся по кнопкам слева слайдов "Доставка", "Гарантия" и "Кредит"-->
       <div class="services">
         <div class="container">
-<!--Блок слайдов услуг-->
+          <!--Блок слайдов услуг-->
           <div class="services-slider">
             <input class="services-slide-switch" type="radio" name="services-slide-switch" value="1" id="services-slide-switch1">
             <input class="services-slide-switch" type="radio" name="services-slide-switch" value="2" id="services-slide-switch2">
             <input class="services-slide-switch" type="radio" name="services-slide-switch" value="3" id="services-slide-switch3">
-<!--Слайды услуг-->
+            <!--Слайды услуг-->
             <div class="services-slides">
               <div class="services-slide">
                   <h2>Доставка</h2>
@@ -166,7 +168,7 @@
                   <h2>Кредит</h2>
                   <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
               </div>
-<!--Блок меток для переключения слайдов услуг-->
+              <!--Блок меток для переключения слайдов услуг-->
               <div class="services-slide-labels">
                 <label for="services-slide-switch1"></label>
                 <label for="services-slide-switch2"></label>
@@ -177,7 +179,7 @@
         </div>
       </div>
 
-<!--Блок "Логотипы"-->
+      <!--Блок "Логотипы"-->
       <div class="container">
         <ul class="logotypes">
           <li>
@@ -195,7 +197,7 @@
         </ul>
 
         <div class="info-contacts-wrapper">
-<!--Блок "О нас"-->
+          <!--Блок "О нас"-->
           <section class="info">
             <h2>О нас</h2>
             <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -208,14 +210,14 @@
             <a class="btn" href="#">Подробнее о нас</a>
           </section>
 
-  <!--Блок "Контакты"-->
+          <!--Блок "Контакты"-->
           <section class="contacts">
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
             <a class="map" href="#">
               <img src="img/map.jpg" alt="Местоположение офиса" width="560" height="222">
             </a>
-  <!--Это ссылка, открывающая модальное окно с формой связи.-->
+            <!--Это ссылка, открывающая модальное окно с формой связи.-->
             <a class="btn write-us" href="#">Напишите нам</a>
           </section>
         </div>
@@ -223,7 +225,7 @@
       </div>
     </main>
 
-<!--ФУТЕР-->
+    <!--ФУТЕР-->
     <footer class="page-footer">
       <div class="container">
         <div class="footer-wrapper">
@@ -253,9 +255,7 @@
           </div>
           <div class="right-footer">
             <div class="actions-footer">
-              <div class="login-state">
-                <a class="actions-not-logged" href="#">Войти</a>
-              </div>
+              <a class="actions-not-logged" href="#">Войти</a>
               <a class="actions-compare" href="#">Сравнить</a>
               <a class="actions-cart" href="#">Корзина</a>
             </div>
@@ -266,7 +266,7 @@
       </div>
     </footer>
 
-<!--Модальное окно "Напишите нам".-->
+    <!--Модальное окно "Напишите нам".-->
     <div class="write-us-window">
       <form action="/echo" method="post">
         <label for="name">Ваше имя:</label>
