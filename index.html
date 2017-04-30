@@ -62,9 +62,15 @@
       <div class="container">
         <!--Блок верхних слайдов-->
         <div class="slider">
-          <input class="slide-switch" type="radio" name="slide-switch" value="1" id="slide-switch1">
-          <input class="slide-switch" type="radio" name="slide-switch" value="2" id="slide-switch2">
-          <input class="slide-switch" type="radio" name="slide-switch" value="3" id="slide-switch3">
+          <input class="slide-switch" type="radio" name="slide-switch" id="slide-switch1" checked>
+          <input class="slide-switch" type="radio" name="slide-switch" id="slide-switch2">
+          <input class="slide-switch" type="radio" name="slide-switch" id="slide-switch3">
+          <!--Блок меток для переключения слайдов-->
+          <div class="slider-controls">
+            <label for="slide-switch1"></label>
+            <label for="slide-switch2"></label>
+            <label for="slide-switch3"></label>
+          </div>
           <div class="slides">
             <!--Слайд 1-->
             <div class="slide">
@@ -72,13 +78,22 @@
                 <img src="img/slide-1.png" alt="Палка для селфи" width="537" height="507">
               </div>
               <div class="slide-text">
-                <h2>Делай селфи,<br>как Бен Стиллер!</h2>
-                <p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                <h2 class="gxb s47">Делай селфи,<br>как Бен Стиллер!</h2>
+                <p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <a class="btn" href="#">Подробнее</a>
                 <ul class="slide-info">
-                  <li><span>8,5 м</span>Длина палки</li>
-                  <li><span>5 кг</span>Вес палки</li>
-                  <li><span>Карбон</span>Материал</li>
+                  <li>
+                    <p class="gl s36">8,5 м</p>
+                    <p class="s13">Длина палки</p>
+                  </li>
+                  <li>
+                    <p class="gl s36">5 кг</p>
+                    <p class="s13">Вес палки</p>
+                  </li>
+                  <li>
+                    <p class="gl s36">Карбон</p>
+                    <p class="s13">Материал</p>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -88,11 +103,14 @@
                 <img src="img/slide-2.png" alt="Фитнес-браслет" width="537" height="507">
               </div>
               <div class="slide-text">
-                <h2>Худеем правильно!</h2>
-                <p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                <h2 class="gxb s47">Худеем <br>правильно!</h2>
+                <p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы <br>не пропускать занятия и соблюдать диету.</p>
                 <a class="btn" href="#">Подробнее</a>
                 <ul class="slide-info">
-                  <li><span>48 часов</span>Без подзарядки</li>
+                  <li>
+                    <p class="gl s36">48 часов</p>
+                    <p class="s13">Без подзарядки</p>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -102,21 +120,22 @@
                 <img src="img/slide-3.png" alt="Квадрокоптер" width="537" height="507">
               </div>
               <div class="slide-text">
-                <h2>Порхает как бабочка, жалит как пчела!</h2>
+                <h2 class="gxb s47">Порхает как бабочка, жалит как пчела!</h2>
                 <p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
                 <a class="btn" href="#">Подробнее</a>
                 <ul class="slide-info">
-                  <li><span>800 м</span>Дальность полета</li>
-                  <li><span>50 м</span>Радиус поражения</li>
+                  <li>
+                    <p class="gl s36">800 м</p>
+                    <p class="s13">Дальность полета</p>
+                  </li>
+                  <li>
+                    <p class="gl s36">50 м</p>
+                    <p class="s13">Радиус поражения</p>
+                  </li>
                 </ul>
               </div>
             </div>
-            <!--Блок меток для переключения слайдов-->
-            <div class="slide-labels">
-              <label for="slide-switch1"></label>
-              <label for="slide-switch2"></label>
-              <label for="slide-switch3"></label>
-            </div>
+
           </div>
         </div>
 
@@ -263,6 +282,13 @@
         </div>
       </div>
     </footer>
+
+<div class="container">
+    <div class="flex-cont">
+      <div class="flex-item"></div>
+      <div class="flex-item"></div>
+    </div>
+</div>
 
     <!--Модальное окно "Напишите нам".-->
     <div class="write-us-window">
