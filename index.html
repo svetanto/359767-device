@@ -18,12 +18,12 @@
         <div class="upper-string">
           <!--Форма поиска по сайту-->
           <form class="actions-search" action="/echo" method="post">
-            <input class="hover-fading" type="search" placeholder="Поиск по сайту" name="search" id="sitesearch">
+            <input type="search" placeholder="Поиск по сайту" name="search" id="sitesearch">
             <button class="submit-string" type="submit">Найти</button>
           </form>
           <!--Ссылки для входа в авторизованный режим, сравнения выбранных товаров и просмотра корзины-->
-          <div class="actions-login">
-            <a class="not-logged hover-fading" href="#">Войти</a>
+          <div class="user-block">
+            <a class="actions-not-logged hover-fading" href="#">Войти</a>
           </div>
           <a class="actions-compare hover-fading" href="#">Сравнить</a>
           <a class="actions-cart hover-fading" href="#">Корзина</a>
@@ -140,24 +140,54 @@
         </div>
 
         <!--Блок "Популярное"-->
-        <ul class="popular">
+        <ul class="popular gxb s18">
           <li>
-            <a href="#">Виртуальная реальность</a>
+            <a href="#">
+              <div class="popular-bgr">
+                <div class="popular-icon"></div>
+              </div>
+              <p class="popular-category">Виртуальная реальность</p>
+            </a>
           </li>
           <li>
-            <a href="catalog-monopodes.html">Моноподы для селфи</a>
+            <a href="#">
+              <div class="popular-bgr">
+                <div class="popular-icon"></div>
+              </div>
+              <p class="popular-category">Моноподы <br>для селфи</p>
+            </a>
           </li>
           <li>
-            <a href="#">Экшн-камеры</a>
+            <a href="#">
+              <div class="popular-bgr">
+                <div class="popular-icon"></div>
+              </div>
+              <p class="popular-category">Экшн-камеры</p>
+            </a>
           </li>
           <li>
-            <a href="#">Фитнес-браслеты</a>
+            <a href="#">
+              <div class="popular-bgr">
+                <div class="popular-icon"></div>
+              </div>
+              <p class="popular-category">Фитнес-браслеты</p>
+            </a>
           </li>
           <li>
-            <a href="#">Умные часы</a>
+            <a href="#">
+              <div class="popular-bgr">
+                <div class="popular-icon"></div>
+              </div>
+              <p class="popular-category">Умные часы</p>
+            </a>
           </li>
           <li>
-            <a href="#">Квадрокоптеры</a>
+            <a href="#">
+              <div class="popular-bgr">
+                <div class="popular-icon"></div>
+              </div>
+              <p class="popular-category">Квадрокоптеры</p>
+            </a>
           </li>
         </ul>
 
@@ -168,28 +198,28 @@
         <div class="container">
           <!--Блок слайдов услуг-->
           <div class="services-slider">
-            <input class="services-slide-switch" type="radio" name="services-slide-switch" value="1" id="services-slide-switch1">
+            <input class="services-slide-switch" type="radio" name="services-slide-switch" value="1" id="services-slide-switch1" checked>
             <input class="services-slide-switch" type="radio" name="services-slide-switch" value="2" id="services-slide-switch2">
             <input class="services-slide-switch" type="radio" name="services-slide-switch" value="3" id="services-slide-switch3">
+            <!--Блок меток для переключения слайдов услуг-->
+            <div class="services-slider-controls">
+              <label class="btn" for="services-slide-switch1">Доставка</label>
+              <label class="btn" for="services-slide-switch2">Гарантия</label>
+              <label class="btn" for="services-slide-switch3">Кредит</label>
+            </div>
             <!--Слайды услуг-->
             <div class="services-slides">
               <div class="services-slide">
-                  <h2>Доставка</h2>
+                  <h2 class="gxb s47">Доставка</h2>
                   <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
               </div>
               <div class="services-slide">
-                  <h2>Гарантия</h2>
-                  <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                  <h2 class="gxb s47">Гарантия</h2>
+                  <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. <br>Товар, не дом, конечно же.</p>
               </div>
               <div class="services-slide">
-                  <h2>Кредит</h2>
+                  <h2 class="gxb s47">Кредит</h2>
                   <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-              </div>
-              <!--Блок меток для переключения слайдов услуг-->
-              <div class="services-slide-labels">
-                <label for="services-slide-switch1"></label>
-                <label for="services-slide-switch2"></label>
-                <label for="services-slide-switch3"></label>
               </div>
             </div>
           </div>

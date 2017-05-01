@@ -94,7 +94,7 @@ a {
 /*Стили кнопок*/
 .btn {
   display: inline-block;
-  padding: 10px 40px;
+  padding: 10px 0px;
   font-size: 18px;
   line-height: 1.2em;
   font-weight: 800;
@@ -103,6 +103,7 @@ a {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   vertical-align: top;
+  text-align: center;
   background-image: linear-gradient(transparent 0%, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
   background-color: transparent;
   border: none;
@@ -141,7 +142,7 @@ a {
   position: relative;
   background-color: #f7e296;
   margin-top: 40px;
-  padding-top: 43px;
+  padding-top: 42px;
 }
 /*Позиционирование логотипа на хедере*/
 .on-header-logo {
@@ -224,20 +225,23 @@ a {
 #sitesearch:focus ~ .submit-string {
   display: inline;
 }
-.actions-login {
-  flex-basis: 250px;
+.user-block {
+  width: 250px;
   margin-left: 89px;
 }
-.actions-login::before {
+
+.actions-not-logged::before {
+  position: absolute;
   background-position: -16px;
   left: -29px;
+  top: 1px;
 }
 .logged {
   margin-left: 20px;
 }
 
 .actions-compare {
-  flex-basis: 100px;
+  width: 100px;
   margin-left: 31px;
 }
 .actions-compare::before {
@@ -245,7 +249,7 @@ a {
   background-position: -32px;
 }
 .actions-cart {
-  flex-basis: 100px;
+  width: 100px;
   margin-left: 33px;
 }
 .actions-cart::before {
@@ -309,7 +313,7 @@ nav ul {
 
 
 
-/*Спрятанный слайдер*/
+/*Верхний слайдер*/
 .slider {
   position: relative;
 }
@@ -405,6 +409,7 @@ nav ul {
 }
 .slide-text .btn {
   margin-top: 28px;
+  width: 220px;
 }
 .slide-info {
   display: flex;
@@ -422,20 +427,6 @@ nav ul {
   margin-top: -32px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Блок популярных товаров*/
 .popular {
   margin: 0;
@@ -446,21 +437,136 @@ nav ul {
   justify-content: space-between;
   list-style: none;
   font-size: 18px;
-  margin-top: 1000px;
-  margin-bottom: 565px;
+  margin-bottom: 83px;
 }
-
-.popular a {
-  display: block;
+.popular li {
   width: 160px;
+  height: 240px;
+}
+.popular-bgr {
+  background-color: #f7e296;
+}
+.popular-icon {
+  width: 160px;
+  height: 160px;
+  background: url("../img/popular-sprite.png") no-repeat;
+  margin-bottom: 37px;
+}
+a:hover .popular-bgr {
+  background-color: #f0c52e;
+}
+a:active .popular-icon,
+a:active .popular-category {
+  opacity: 0.3;
+}
+li:nth-child(2) .popular-icon {
+  background-position: -160px;
+}
+li:nth-child(3) .popular-icon {
+  background-position: -320px;
+}
+li:nth-child(4) .popular-icon {
+  background-position: -480px;
+}
+li:nth-child(5) .popular-icon {
+  background-position: -640px;
+}
+li:nth-child(6) .popular-icon {
+  background-position: -800px;
 }
 
-/*Спрятанный слайдер услуг*/
-.services {
+/*Слайдер услуг*/
+.services-slide-switch {
   display: none;
 }
-/*Блок логотипы*/
+.services-slide {
+  display: none;
+}
+.services {
+  height: 388px;
+  background-image: linear-gradient(transparent 0%, transparent 26%, #e5e5e5 26%, #e5e5e5 100%);
+  margin-bottom: 95px;
+}
+.services-slide {
+  position: relative;
+  width: 850px;
+  height: 319px;
+  margin-left: 277px;
+  padding-left: 117px;
+  padding-top: 30px;
+  border-left: 7px solid #000000;
+}
+.services-slide::after {
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 197px;
+  left: 650px;
+  top: 60px;
+  background: url("../img/services-sprite.png") no-repeat;
+}
+.services-slide p {
+  width: 435px;
+  margin-top: -13px;
+}
+.services-slide:nth-child(2)::after {
+  background-position: -180px;
+}
+.services-slide:nth-child(3)::after {
+  background-position: -360px;
+}
+.services-slider {
+  position: relative;
+}
+.services-slider-controls {
+  position: absolute;
+  top: 80px;
+  left: 0px;
+}
+.services-slider-controls label {
+  display: block;
+  width: 160px;
+  margin-bottom: 23px;
+}
 
+#services-slide-switch1:checked ~ .services-slider-controls label[for="services-slide-switch1"],
+#services-slide-switch2:checked ~ .services-slider-controls label[for="services-slide-switch2"],
+#services-slide-switch3:checked ~ .services-slider-controls label[for="services-slide-switch3"] {
+  background-color: #000000;
+  background-image: none;
+  color: #f7e184;
+  width: 165px;
+  padding-right: 115px;
+}
+#services-slide-switch1:checked ~ .services-slides .services-slide:nth-child(1) {
+  display: block;
+}
+#services-slide-switch2:checked ~ .services-slides .services-slide:nth-child(2) {
+  display: block;
+}
+#services-slide-switch3:checked ~ .services-slides .services-slide:nth-child(3) {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Блок логотипы*/
 .logotypes {
   margin: 0;
   padding: 0;
@@ -474,8 +580,13 @@ nav ul {
 .logotype {
   width: 260px;
   height: 100px;
+  filter: grayscale(1);
+  opacity: 0.2;
 }
-
+.logotype:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
 /*Блок инфо+контакты*/
 .info-contacts-wrapper {
   margin: 0;
