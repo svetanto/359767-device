@@ -296,7 +296,7 @@ nav ul {
   transform: rotate(90deg);
 }
 .mainmenu > li:nth-child(2) {
-  margin-left: 289px;
+  margin-left: 321px;
 }
 .mainmenu > li:nth-child(3) {
   margin-left: 34px;
@@ -338,6 +338,11 @@ nav ul {
   position: relative;
 }
 .slides .slide {
+  width: 1160px;
+  height: 644px;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(#f7e296 0%, #f7e296 25.4%, transparent 25.4%, transparent 100%);
   display: none;
 }
 
@@ -365,6 +370,8 @@ nav ul {
 #slide-switch3:checked ~ .slider-controls label[for="slide-switch3"] {
   border-color: #000000;
 }
+/*------------------------------------------------------------------ Андрей, эти селекторы можно как-то попарно объединить?*/
+/*Показ слайдов по нажатию на радиокнопки*/
 #slide-switch1:checked ~ .slides .slide:nth-child(1) {
   display: flex;
 }
@@ -374,6 +381,7 @@ nav ul {
 #slide-switch3:checked ~ .slides .slide:nth-child(3) {
   display: flex;
 }
+/*Замена содержимого на псевдоэлементе - номере слайда*/
 #slide-switch1:checked ~ .slides .slide-image::after {
   content: "01";
 }
@@ -383,19 +391,12 @@ nav ul {
 #slide-switch3:checked ~ .slides .slide-image::after {
   content: "03";
 }
-.slide {
-  width: 1160px;
-  height: 644px;
-  display: flex;
-  justify-content: space-between;
-  background-image: linear-gradient(#f7e296 0%, #f7e296 25.4%, transparent 25.4%, transparent 100%);
-}
-
+/*---------------------------------------------------------------------------------------------------------------------------/
 /*Оформление слайда*/
 .slide-image {
   position: relative;
   width: 537px;
-  margin-top: 48px;
+  margin-top: 50px;
   margin-left: 23px;
 }
 .slide-image::after {
@@ -420,7 +421,7 @@ nav ul {
   content: "";
   width: 100px;
   height: 7px;
-  top: -3px;
+  top: -2px;
   background-color: #ffffff;
   z-index: 2;
 }
@@ -568,24 +569,6 @@ li:nth-child(6) .popular-icon {
   display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Блок логотипы*/
 .logotypes {
   margin: 0;
@@ -595,7 +578,7 @@ li:nth-child(6) .popular-icon {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 .logotype {
   width: 260px;
@@ -612,12 +595,60 @@ li:nth-child(6) .popular-icon {
   margin: 0;
   padding: 0;
   width: 1160px;
-  height: 585px;
+  min-height: 585px;
   display: flex;
+  justify-content: space-between;
   margin-bottom: 45px;
 }
-.contacts {
-  margin-left: 35px;
+.info-contacts-wrapper .info {
+  position: relative;
+  width: 475px;
+}
+.info-contacts-wrapper .contacts {
+  position: relative;
+  width: 562px;
+}
+
+.info-contacts-wrapper p {
+  letter-spacing: 0;
+}
+.info p:not(:first-child) {
+  margin-top: 30px;
+}
+.info ul {
+  list-style: none;
+  margin-top: 77px;
+  margin-left: -5px;
+  margin-bottom: 65px;
+}
+.info li {
+  position: relative;
+  margin-bottom: 21px;
+}
+.info li::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  left: -35px;
+  top: 5px;
+  border: 3px solid #000000;
+  border-radius: 50%;
+}
+.contacts img {
+  margin-top: 24px;
+  margin-bottom: 61px;
+}
+.info-contacts-wrapper .btn {
+  width: 260px;
+}
+.info-contacts-wrapper .black-line::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 7px;
+  top: -8px;
+  background-color: #000000;
 }
 
 /*Футер*/
