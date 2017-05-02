@@ -131,7 +131,7 @@ a {
   background-color: transparent;
   color: #000000;
 }
-/*Общий стиль блока-центровщика*/
+/*Общий стиль блока-центровщика -------------------------------------------------------------------------------------------------------------------*/
 .container {
   width: 1160px;
   margin: 0 auto;
@@ -147,14 +147,19 @@ a {
 /*Позиционирование логотипа на хедере*/
 .on-header-logo {
   position: absolute;
-  top: -30px;
-  left: 58px;
+  top: -18px;
+  left: 60px;
 }
 /*Оформление блока ссылок на хедере*/
 .upper-string {
   display: flex;
   margin-bottom: 40px;
   align-items: baseline;
+}
+[class^="actions-"] {
+  position: relative;
+  flex-shrink: 0;
+  /*background-color: rgba(255, 0, 0, 0.5);*/
 }
 [class^="actions-"]::before {
   content: "";
@@ -164,12 +169,6 @@ a {
   top: 6px;
   background: url("../img/icon-sprite.png") no-repeat;
 }
-[class^="actions-"] {
-  position: relative;
-  flex-shrink: 0;
-  /*background-color: rgba(255, 0, 0, 0.5);*/
-}
-
 .actions-search {
   width: 440px;
   margin-left: 97px;
@@ -177,13 +176,23 @@ a {
 }
 .submit-string {
   position: absolute;
-  margin-top: -5px;
+  font: inherit;
+  margin-top: -7px;
   margin-left: 4px;
   width: 85px;
   height: 49px;
   background-color: transparent;
   border: 2px solid #000000;
   display: none;
+}
+.submit-string::after {
+  content: "";
+  position: absolute;
+  left: -358px;
+  top: 45px;
+  width: 360px;
+  height: 2px;
+  background-color: #000000;
 }
 .submit-string:hover {
   background-color: #000000;
@@ -193,15 +202,7 @@ a {
   color: #6a6a6a;
   display: inline;
 }
-.submit-string::after {
-  content: "";
-  position: absolute;
-  left: -358px;
-  top: 45px;
-  width: 360px;
-  height: 0;
-  border: 1px solid #000000;
-}
+
 .actions-search::before {
   left: -34px;
   top: 8px;
@@ -225,11 +226,14 @@ a {
 #sitesearch:focus ~ .submit-string {
   display: inline;
 }
+
+
+
+
 .user-block {
   width: 250px;
   margin-left: 89px;
 }
-
 .actions-not-logged::before {
   position: absolute;
   background-position: -16px;
@@ -262,18 +266,34 @@ nav ul {
 }
 .mainmenu {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 0;
-}
-/*Стилизация плюса после пункта меню "Каталог товаров"*/
-.faded-plus {
-  font-size: 39px;
-  color: #b8a974;
-  font-weight: 400;
-  line-height: 20px;
-  vertical-align: text-bottom;
 }
 .mainmenu > li:nth-child(1) {
   margin-left: 20px;
+}
+/*Плюс на псевдоэлементах после первого пункта меню*/
+.mainmenu-first {
+  position: relative;
+}
+.mainmenu-first::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  right: -27px;
+  top: 10px;
+  background-color: #b8a974;
+}
+.mainmenu-first::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  right: -27px;
+  top: 10px;
+  background-color: #b8a974;
+  transform: rotate(90deg);
 }
 .mainmenu > li:nth-child(2) {
   margin-left: 289px;
