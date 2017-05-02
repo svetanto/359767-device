@@ -574,21 +574,29 @@ li:nth-child(6) .popular-icon {
   margin: 0;
   padding: 0;
   width: 1160px;
-  height: 100px;
   display: flex;
   justify-content: space-between;
-  list-style: none;
   margin-bottom: 100px;
 }
 .logotype {
   width: 260px;
   height: 100px;
-  filter: grayscale(1);
-  opacity: 0.2;
+  font-size: 0;
+}
+.logotype.dji {
+  background: url("../img/dji-sprite.png") no-repeat;
+}
+.logotype.spgadgets {
+  background: url("../img/spgadgets-sprite.png") no-repeat;
+}
+.logotype.gopro {
+  background: url("../img/gopro-sprite.png") no-repeat;
+}
+.logotype.vive {
+  background: url("../img/vive-sprite.png") no-repeat;
 }
 .logotype:hover {
-  filter: grayscale(0);
-  opacity: 1;
+  background-position: bottom;
 }
 /*Блок инфо+контакты*/
 .info-contacts-wrapper {
