@@ -659,9 +659,6 @@ li:nth-child(6) .popular-icon {
   background-color: #000000;
 }
 
-
-
-
 /*Футер*/
 .page-footer {
   background-color: #464646;
@@ -815,26 +812,63 @@ li:nth-child(6) .popular-icon {
 
 
 /*------------------------------------------------------------------------------ Стили страницы каталога ---------------*/
+
 /*Основной блок страницы каталога*/
+.add-header-bgr {
+  height: 51px;
+  background-color: #f7e296;
+}
 .catalog-upper-block {
-  position: relative;
-  /*background-color: rgba(255, 0, 0, 0.5);*/
+  min-height: 132px;
+  padding-top: 33px;
+  padding-left: 60px;
+}
+.catalog-upper-block h1 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+.breadcrumbs {
+  padding: 0;
+  display: flex;
+  list-style: none;
 }
 .breadcrumbs li {
-  display: inline-block;
+  position: relative;
+  margin-right: 37px;
+}
+.breadcrumbs a,
+.breadcrumbs span {
+  opacity: 0.3;
+}
+.breadcrumbs a:hover {
+  opacity: 0.6;
+}
+.breadcrumbs a:active {
+  opacity: 0.1;
+}
+/*Значки > между элементами хлебных крошек*/
+.breadcrumbs li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 1px;
+  left: -22px;
+  top: 10px;
+  background-color: #000000;
+  transform: rotate(-45deg);
+}
+.breadcrumbs li:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 1px;
+  left: -22px;
+  top:7px;
+  background-color: #000000;
+  transform: rotate(45deg);
 }
 
-/*Заголовок блока фильтров и блока выбранных товаров с кнопками сортировки*/
-.filter-sort-header .container {
-  display: flex;
-  justify-content: space-between;
-}
-.sort {
-  display: flex;
-  justify-content: space-between;
-  width: 500px;
-  margin-left: 200px;
-}
+
 /*Обертка блока фильтров и выбранных товаров с градиентным фоном*/
 .main-wrapper {
   display: flex;
@@ -856,15 +890,76 @@ li:nth-child(6) .popular-icon {
 }
 
 .filters {
-  margin-left: 60px;
-  width: 200px;
+  margin-left: 57px;
+  width: 198px;
   background-color: #eeeeee;
   padding-right: 73px;
-  padding-top: 100px;
+  padding-top: 19px;
 }
+.filters-form {
+  margin-top: 104px;
+}
+.filters-form ul {
+  list-style: none;
+}
+.filters fieldset {
+  position: relative;
+  border: none;
+  padding: 0;
+}
+.filters legend {
+  padding: 0;
+}
+.filters fieldset::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  top: -15px;
+  background-color: #000000;
+}
+/*Стилизация фильтра-ползунка (пока затычка)*/
+.filter-interval input {
+  width: 100px;
+}
+
+/*Отступы между полями фильтров*/
+.filter-price {
+  margin-bottom: 30px;
+}
+.filter-color {
+  margin-bottom: 85px;
+}
+.filter-bluetooth {
+  margin-bottom: 40px;
+}
+.show-selected {
+  width: 200px;
+}
+
+/*Блок сортировки*/
+
+.sort-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 760px;
+  height: 50px;
+  margin-bottom: 78px;
+  padding-top: 10px;
+  /*background-color: rgba(255, 0, 0, 0.5);*/
+}
+.sort-property {
+  display: flex;
+  justify-content: space-between;
+  width: 290px;
+  margin-right: 160px;
+  letter-spacing: 0;
+}
+
 .selected-items {
   width: 760px;
-  padding-top: 120px;
+  /*padding-top: 120px;*/
   /*background-color: rgba(255, 0, 0, 0.5);*/
 }
 .item-cards {
@@ -872,21 +967,54 @@ li:nth-child(6) .popular-icon {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0;
+  margin-bottom: 0px;
 }
 .item-card {
   width: 360px;
+  margin-bottom: 50px;
 }
+.item-card img {
+  margin-bottom: 26px;
+}
+.item-text {
+  display: flex;
+  justify-content: space-between;
+}
+.item-name {
+  width: 260px;
+}
+.item-price {
+  width: 80px;
+  text-align: right;
+}
+
 /*Блок навигации по страницам выбранных товаров*/
 .page-nav {
   display: flex;
+  min-height: 70px;
   justify-content: space-between;
+  align-items: center;
   background-color: #eeeeee;
-  margin-top: 50px;
-  margin-bottom: 73px;
+  margin-top: -10px;
+  margin-bottom: 70px;
+}
+.page-nav a {
+  font: inherit;
+}
+.page-nav .backward {
+  margin-left: 30px;
+}
+.page-nav .forward {
+  margin-right: 26px;
+  text-align: right;
 }
 .choose-page {
+  margin-left: 30px;
   display: flex;
-  list-style: none;
+  justify-content: space-between;
+}
+.nav-btn {
+  width: 38px;
 }
 
 
