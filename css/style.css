@@ -82,14 +82,13 @@ a {
 .nt {text-transform: none;}
 
 /*Базовые стили ПОВЕДЕНИЯ ПРИ НАВЕДЕНИИ И НАЖАТИИ ------------------------------*/
-.hover-fading:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
-.hover-fading:active {
-  opacity: 0.3;
-  cursor: pointer;
-}
+.hover-fading {opacity: 1;}
+.hover-fading:hover {opacity: 0.6;}
+.hover-fading:active {opacity: 0.3;}
+
+.hover-brighting {opacity: 0.7}
+.hover-brighting:hover {opacity: 1;}
+.hover-brighting:active {opacity: 0.3;}
 
 /*Стили кнопок*/
 .btn {
@@ -741,6 +740,8 @@ li:nth-child(6) .popular-icon {
   width: 330px;
   padding-top: 15px;
   letter-spacing: 0;
+  text-align: right;
+  /*background-color: rgba(0, 255, 0, 0.5);*/
 }
 .right-footer a {
   color: #ffffff;
@@ -749,51 +750,49 @@ li:nth-child(6) .popular-icon {
 
 .right-footer p {
   margin-top: 36px;
-  text-align: right;
 }
-.footer-actions {
-  display: flex;
-  margin-left: 32px;
-  /*background-color: rgba(255, 0, 0, 0.5);*/
-}
-.footer-actions [class^="actions-"] {
-  width: 70px;
-  /*background-color: rgba(0, 255, 0, 0.5);*/
-}
-.footer-actions .actions-compare {
-  margin-left: 36px;
-}
-.footer-actions .actions-cart {
-  margin-left: 63px;
-}
-.footer-actions a::before {
-  top: 6px;
+.footer-actions .fading {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  margin-left: 35px;
   background: url("../img/icon-sprite-yellow.png") no-repeat;
+  background-position: 0 2px;
   opacity: 1;
 }
-.footer-actions a:hover::before {
-  opacity: 0.6;
-}
-.footer-actions a:active::before {
-  opacity: 0.3;
-}
-.footer-actions a {
+.footer-actions .brighting {
   opacity: 0.7;
 }
-.footer-actions a:hover {
+.footer-not-logged .fading {
+  margin-left: 0;
+}
+.footer-compare .fading {
+  background-position: -16px 2px;
+}
+.footer-cart .fading {
+  background-position: -32px 2px;
+}
+.footer-not-logged:hover .fading,
+.footer-compare:hover .fading,
+.footer-cart:hover .fading {
+  opacity: 0.6;
+}
+.footer-not-logged:hover .brighting,
+.footer-compare:hover .brighting,
+.footer-cart:hover .brighting {
   opacity: 1;
 }
-.footer-actions a:active {
+.footer-not-logged:active .fading,
+.footer-compare:active .fading,
+.footer-cart:active .fading,
+.footer-not-logged:active .brighting,
+.footer-compare:active .brighting,
+.footer-cart:active .brighting {
   opacity: 0.3;
 }
-.footer-actions a:nth-child(2)::before {
-  background-position: -16px;
-}
-.footer-actions a:nth-child(3)::before {
-  background-position: -32px;
-}
 .htmlacademy {
-  float: right;
+  display: inline-block;
   width: 27px;
   height: 34px;
   margin-top: 48px;
