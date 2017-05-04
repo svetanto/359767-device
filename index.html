@@ -255,9 +255,29 @@
           <section class="contacts black-line">
             <h2 class="gxb s47">Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-            <a class="map" href="#">
-              <img src="img/map-small.png" alt="Местоположение офиса" width="560" height="222">
-            </a>
+
+
+            <div class="map-slider">
+              <input class="map-switch" type="radio" name="map-switch" value="1" id="map-on">
+              <input class="map-switch" type="radio" name="map-switch" value="2" id="map-off" checked>
+
+              <label class="map-on-label" for="map-on"><img src="img/map-small.png" alt="Местоположение офиса" width="560" height="222"></label>
+
+
+              <!--Pop-up карты-->
+              <div class="map-popup-overlay">
+                <div class="map-popup">
+                  <label class="map-off-label" for="map-off"></label>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
             <!--Это ссылка, открывающая модальное окно с формой связи.-->
             <a class="btn write-us" href="#">Напишите нам</a>
           </section>
@@ -321,6 +341,7 @@
         <button class="btn" type="submit">Отправить</button>
       </form>
     </div>
+
 
   </body>
 </html>
