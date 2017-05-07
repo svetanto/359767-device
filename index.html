@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <link href="css/normalize.css/" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -21,7 +21,7 @@
           <!--Форма поиска по сайту-->
           <form class="actions-search" action="/echo" method="post">
             <input type="search" placeholder="Поиск по сайту" name="search" id="sitesearch">
-            <button class="submit-string" type="submit">Найти</button>
+            <button class="submit-string-button" type="submit">Найти</button>
           </form>
           <!--Ссылки для входа в авторизованный режим, сравнения выбранных товаров и просмотра корзины-->
           <div class="user-block">
@@ -255,29 +255,7 @@
           <section class="contacts black-line">
             <h2 class="gxb s47">Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-
-
-            <div class="map-slider">
-              <input class="map-switch" type="radio" name="map-switch" value="1" id="map-on">
-              <input class="map-switch" type="radio" name="map-switch" value="2" id="map-off" checked>
-
-              <label class="map-on-label" for="map-on"><img src="img/map-small.png" alt="Местоположение офиса" width="560" height="222"></label>
-
-
-              <!--Pop-up карты-->
-              <div class="map-popup-overlay">
-                <div class="map-popup">
-                  <label class="map-off-label" for="map-off"></label>
-                </div>
-              </div>
-
-
-
-
-
-
-
-
+            <a href="#"><img src="img/map-small.png" alt="Местоположение офиса" width="560" height="222"></a>
             <!--Это ссылка, открывающая модальное окно с формой связи.-->
             <a class="btn write-us" href="#">Напишите нам</a>
           </section>
@@ -329,19 +307,60 @@
       </div>
     </footer>
 
-    <!--Модальное окно "Напишите нам".-->
-    <div class="write-us-window">
-      <form action="/echo" method="post">
-        <label for="name">Ваше имя:</label>
-        <input type="text" placeholder="Представьтесь, пожалуйста" name="name" id="name" required>
-        <label for="email">Ваш e-mail:</label>
-        <input type="email" placeholder="Для отправки ответа" name="email" id="email" autocomplete="on" required>
-        <label for="letter">Текст письма:</label>
-        <textarea name="letter" id="letter">В свободной форме</textarea>
-        <button class="btn" type="submit">Отправить</button>
-      </form>
+    <!--МОДАЛЬНЫЕ ОКНА-->
+
+    <!--Модальное окно с картой-->
+
+    <div class="map-popup-structure popup-overlay">
+      <div class="map-popup">
+        <div class="close-button"></div>
+      </div>
     </div>
 
 
+    <!--Модальное окно с формой обратной связи-->
+    <div class="feedback-popup-structure popup-overlay popup-show">
+      <div class="feedback-popup">
+        <!-- <form action="/echo" method="post">
+          <label for="name">Ваше имя:</label>
+          <input type="text" placeholder="Представьтесь, пожалуйста" name="name" id="name" required>
+          <label for="email">Ваш e-mail:</label>
+          <input type="email" placeholder="Для отправки ответа" name="email" id="email" autocomplete="on" required>
+          <label for="letter">Текст письма:</label>
+          <textarea name="letter" id="letter">В свободной форме</textarea>
+          <button class="btn" type="submit">Отправить</button>
+        </form>-->
+        <div class="close-button"></div>
+      </div>
+    </div>
+
+    <script>
+      // Открытие и закрытие модального окна с картой
+      var map_open = document.querySelector(".contacts img");
+      var bigmap = document.querySelector(".map-popup-structure");
+      var map_close = bigmap.querySelector(".close-button");
+      map_open.addEventListener("click", function(evt){
+        evt.preventDefault();
+        bigmap.classList.add("popup-show");
+      });
+      map_close.addEventListener("click", function(){
+        bigmap.classList.remove("popup-show");
+        // console.log("Клик по карте");
+      });
+
+      // Открытие и закрытие модального окна с формой обратной связи
+      var feedback_open = document.querySelector(".write-us");
+      var bigform = document.querySelector(".feedback-popup-structure");
+      var feedback_close = bigform.querySelector(".close-button");
+      feedback_open.addEventListener("click", function(evt){
+        evt.preventDefault();
+        bigform.classList.add("popup-show");
+      // console.log("Клик по кнопке");
+      });
+      feedback_close.addEventListener("click", function(){
+        bigform.classList.remove("popup-show");
+      });
+
+    </script>
   </body>
 </html>

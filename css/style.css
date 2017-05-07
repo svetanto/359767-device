@@ -172,33 +172,25 @@ a {
   margin-left: 97px;
   /*background-color: rgba(255, 0, 0, 0.5);*/
 }
-.submit-string {
+.submit-string-button {
   position: absolute;
   font: inherit;
-  margin-top: -7px;
-  margin-left: 4px;
+  bottom: -8px;
+  right: 37px;
   width: 85px;
   height: 49px;
   background-color: transparent;
   border: 2px solid #000000;
   display: none;
+  outline: none;
 }
-.submit-string::after {
-  content: "";
-  position: absolute;
-  left: -358px;
-  top: 45px;
-  width: 360px;
-  height: 2px;
-  background-color: #000000;
-}
-.submit-string:hover {
+.submit-string-button:hover {
   background-color: #000000;
   color: #ffffff;
 }
-.submit-string:active {
+.submit-string-button:active {
   color: #6a6a6a;
-  display: inline;
+  display: block;
 }
 
 .actions-search::before {
@@ -221,10 +213,19 @@ a {
 .actions-search input:focus {
   outline: none;
 }
-#sitesearch:focus ~ .submit-string {
-  display: inline;
+.actions-search input:focus ~ .submit-string-button {
+  display: block;
 }
-
+.actions-search input:focus ~ .submit-string-button::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 40px;
+  width: 398px;
+  height: 2px;
+  background-color: #000000;
+}
 
 
 
@@ -642,7 +643,13 @@ li:nth-child(6) .popular-icon {
   border: 3px solid #000000;
   border-radius: 50%;
 }
-
+.contacts img {
+  cursor: pointer;
+}
+/*Модальное окно с картой*/
+.map-popup-structure {
+  display: none;
+}
 .map-popup {
   padding: 0;
   width: 960px;
@@ -655,44 +662,56 @@ li:nth-child(6) .popular-icon {
   background-image: url("../img/map-big.png");
   box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
 }
-.map-popup-overlay {
+.map-popup .close-button {
+  top: 22px;
+  left: 883px;
+}
+/*Модальное окно с формой обратной связи*/
+.feedback-popup-structure {
+  display: none;
+}
+.feedback-popup {
+  padding: 0;
+  width: 960px;
+  height: 553px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-480px, -277px);
+  z-index: 20;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
+}
+.feedback-popup .close-button {
+  top: 22px;
+  left: 883px;
+}
+
+
+/*Общие элементы модальных окон*/
+.popup-show {
+  display: block;
+}
+.popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 30;
   background-color: rgba(0,0,0, 0.7);
 }
-.map-switch {
-  display: none;
-}
-.map-on-label {
-  cursor: pointer;
-}
-.map-off-label {
+.close-button {
   position: absolute;
   width: 55px;
   height: 55px;
-  top: 22px;
-  left: 883px;
   background-color: #f0c52e;
   opacity: 0.5;
   border-radius: 50%;
   cursor: pointer;
 }
-.map-off-label:hover {
-  opacity: 1;
-}
-.map-off-label:active {
-  opacity: 1;
-}
-.map-off-label:active::before,
-.map-off-label:active::after {
-  opacity: 0.3;
-}
-
-.map-off-label::before,
-.map-off-label::after {
+.close-button::before,
+.close-button::after {
   content: "";
   position: absolute;
   width: 30px;
@@ -701,18 +720,23 @@ li:nth-child(6) .popular-icon {
   left: 12px;
   background-color: #ffffff;
 }
-.map-off-label::before {
+.close-button::before {
   transform: rotate(45deg);
 }
-.map-off-label::after {
+.close-button::after {
   transform: rotate(-45deg);
 }
-#map-off:checked ~ .map-popup-overlay {
-  display: none;
+.close-button:hover,
+.close-button:active {
+  opacity: 1;
 }
-#map-on:checked ~ .map-popup {
-  display: block;
+.close-button:active::before,
+.close-button:active::after {
+  opacity: 0.3;
 }
+
+
+
 
 
 
@@ -969,6 +993,7 @@ li:nth-child(6) .popular-icon {
 .filters {
   margin-left: 57px;
   width: 198px;
+  border-right: 60px solid #ffffff;
   background-color: #eeeeee;
   padding-right: 73px;
   padding-top: 19px;

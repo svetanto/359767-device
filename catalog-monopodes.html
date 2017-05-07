@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс - страница каталога</title>
-    <link href="css/normalize.css/" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -13,8 +13,8 @@
 
       <!--Желтая подложка хедера-->
       <div class="header-wrapper">
-        <!--Логотип - некликабельная ссылка-->
-        <a class="on-header-logo">
+        <!--Логотип - ссылка на главную-->
+        <a class="on-header-logo hover-fading" href="index.html">
           <img src="img/device-logo.svg" alt="DEVICE" width="162" height="35">
         </a>
         <!--Блок ссылок-->
@@ -22,11 +22,11 @@
           <!--Форма поиска по сайту-->
           <form class="actions-search" action="/echo" method="post">
             <input type="search" placeholder="Поиск по сайту" name="search" id="sitesearch">
-            <button class="submit-string" type="submit">Найти</button>
+            <button class="submit-string-button" type="submit">Найти</button>
           </form>
           <!--Ссылки для входа в авторизованный режим, сравнения выбранных товаров и просмотра корзины-->
           <div class="user-block">
-            <a class="actions-not-logged hover-fading" href="#">Войти</a>
+            <a class="actions-not-logged hover-fading" href="#">Валентин Петухов</a>
           </div>
           <a class="actions-compare hover-fading" href="#">Сравнить</a>
           <a class="actions-cart hover-fading" href="#">Корзина</a>
@@ -241,7 +241,7 @@
       <div class="container">
         <div class="footer-wrapper">
           <div class="left-footer">
-            <a class="device-logo on-footer-logo">
+            <a class="hover-fading" href="index.html">
               <img src="img/device-logo-yellow.svg" alt="DEVICE" width="162" height="35">
             </a>
             <p>г. Москва, ул. Строителей, 15</p>
