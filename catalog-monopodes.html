@@ -27,6 +27,7 @@
           <!--Ссылки для входа в авторизованный режим, сравнения выбранных товаров и просмотра корзины-->
           <div class="user-block">
             <a class="actions-not-logged hover-fading" href="#">Валентин Петухов</a>
+            <a class="logout hover-brighting" href="#">Выйти</a>
           </div>
           <a class="actions-compare hover-fading" href="#">Сравнить</a>
           <a class="actions-cart hover-fading" href="#">Корзина</a>
@@ -57,21 +58,8 @@
           </ul>
         </nav>
         <!--Конец основного навигационного меню  -->
-
       </div>
     </header>
-
-
-    <!--Ссылки для просмотра профиля пользователя, выхода из авторизованного режима, сравнения выбранных товаров и просмотра корзины
-    <div class="actions-login">
-      <a class="user-profile" href="#">Валентин Петухов</a>
-      <a class="logged" href="#">Выйти</a>
-    </div>-->
-
-
-
-
-
     <!--ОСНОВНОЙ БЛОК-->
     <main>
       <div class="container">
@@ -88,9 +76,6 @@
 
       <div class="main-wrapper">
         <div class="container">
-
-
-
           <!--Блок фильтров-->
           <aside class="filters">
             <b class="filter-header gxb s16 t200 uc">Фильтр:</b>
@@ -101,16 +86,14 @@
                 <div class="filter-price">
                   <div class="filter-range-wrapper">
                     <div class="filter-range">
-                      <div class="filter-range-scale">
-                        <div class="filter-range-bar"></div>
-                      </div>
+                      <div class="filter-range-bar"></div>
                       <div class="filter-range-handle min"></div>
                       <div class="filter-range-handle max"></div>
                     </div>
                   </div>
                   <div class="filter-interval">
-                    <label>От <input type="text" name="min-interval" value="0"></label><br>
-                    <label>До <input type="text" name="max-interval" value="5000"></label>
+                    <label>от <input type="text" name="min-interval" value="0"></label>
+                    <label>до <input type="text" name="max-interval" value="5000"></label>
                   </div>
                 </div>
               </fieldset>
@@ -120,22 +103,37 @@
                 <ul>
                   <li>
                     <input type="checkbox" name="black" id="black" checked>
+                    <svg width="12" height="7">
+                      <polyline points="0,3 4,7 11,0" stroke="black" stroke-width="2" fill="none"/>
+                    </svg>
                     <label for="black">Чёрный</label>
                   </li>
                   <li>
                     <input type="checkbox" name="white" id="white">
+                    <svg width="12" height="7">
+                      <polyline points="0,3 4,7 11,0" stroke="black" stroke-width="2" fill="none"/>
+                    </svg>
                     <label for="white">Белый</label>
                   </li>
                   <li>
                     <input type="checkbox" name="blue" id="blue" checked>
+                    <svg width="12" height="7">
+                      <polyline points="0,3 4,7 11,0" stroke="black" stroke-width="2" fill="none"/>
+                    </svg>
                     <label for="blue">Синий</label>
                   </li>
                   <li>
                     <input type="checkbox" name="red" id="red" checked>
+                    <svg width="12" height="7">
+                      <polyline points="0,3 4,7 11,0" stroke="black" stroke-width="2" fill="none"/>
+                    </svg>
                     <label for="red">Красный</label>
                   </li>
                   <li>
                     <input type="checkbox" name="pink" id="pink">
+                    <svg width="12" height="7">
+                      <polyline points="0,3 4,7 11,0" stroke="black" stroke-width="2" fill="none"/>
+                    </svg>
                     <label for="pink">Розовый</label>
                   </li>
                 </ul>
@@ -149,7 +147,7 @@
                     <label for="present">Есть</label>
                   </li>
                   <li>
-                    <input type="radio" name="itemgroup" id="not-present" value="2" checked>
+                    <input type="radio" name="bluetooth" id="not-present" value="2" checked>
                     <label for="not-present">Нет</label>
                   </li>
                 </ul>
@@ -166,13 +164,13 @@
             <div class="sort-header">
               <div><p class="gxb s16 t200 uc">Сортировка:</p></div>
               <div class="sort-property">
-                <a href="#">По цене</a>
-                <a href="#">По типу</a>
-                <a href="#">По популярности</a>
+                <a class="hover-brighting2" href="#">По цене</a>
+                <a class="hover-brighting2" href="#">По типу</a>
+                <a class="hover-brighting2" href="#">По популярности</a>
               </div>
               <div class="sort-directions">
-                <a href="#">up</a>
-                <a href="#">down</a>
+                <a class="up hover-brighting2" href="#"></a>
+                <a class="down hover-brighting2" href="#"></a>
               </div>
             </div>
             <div class="item-cards">
@@ -222,13 +220,17 @@
               </div>
             </div>
             <div class="page-nav gxb s16 t200 uc">
-              <a class="backward" href="#">Назад</a>
+              <div class="backward rewind">
+                <a href="#">Назад</a>
+              </div>
               <div class="choose-page">
                 <a class="nav-btn active">1</a>
-                <a class="nav-btn" href="#">2</a>
-                <a class="nav-btn" href="#">3</a>
+                <a class="nav-btn hover-brighting2" href="#">2</a>
+                <a class="nav-btn hover-brighting2" href="#">3</a>
               </div>
-              <a class="forward" href="#">Вперед</a>
+              <div class="forward rewind">
+                <a href="#">Вперед</a>
+              </div>
             </div>
           </div>
         </div>

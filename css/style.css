@@ -95,6 +95,9 @@ a {
 .hover-brighting:hover {opacity: 1;}
 .hover-brighting:active {opacity: 0.3;}
 
+.hover-brighting2 {opacity: 0.3}
+.hover-brighting2:hover {opacity: 0.6;}
+.hover-brighting2:active {opacity: 1;}
 /*Стили кнопок*/
 .btn {
   display: inline-block;
@@ -226,9 +229,6 @@ a {
   height: 2px;
   background-color: #000000;
 }
-
-
-
 .user-block {
   width: 250px;
   padding: 0;
@@ -239,10 +239,9 @@ a {
   left: -29px;
   top: 2px;
 }
-.logged {
-  margin-left: 20px;
+.actions-not-logged {
+  margin-right: 15px;
 }
-
 .actions-compare {
   width: 100px;
   margin-left: 31px;
@@ -644,7 +643,20 @@ li:nth-child(6) .popular-icon {
   border-radius: 50%;
 }
 .contacts img {
+  margin-top: 24px;
+  margin-bottom: 61px;
   cursor: pointer;
+}
+.info-contacts-wrapper .btn {
+  width: 260px;
+}
+.info-contacts-wrapper .black-line::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 7px;
+  top: -8px;
+  background-color: #000000;
 }
 /*Модальное окно с картой*/
 .map-popup-structure {
@@ -671,9 +683,10 @@ li:nth-child(6) .popular-icon {
   display: none;
 }
 .feedback-popup {
-  padding: 0;
-  width: 960px;
-  height: 553px;
+  padding-left: 100px;
+  padding-top: 96px;
+  width: 860px;
+  height: 457px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -681,13 +694,63 @@ li:nth-child(6) .popular-icon {
   z-index: 20;
   background-color: #ffffff;
   box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
+  letter-spacing: 0;
 }
 .feedback-popup .close-button {
   top: 22px;
   left: 883px;
 }
-
-
+.name-mail {
+  padding: 0;
+  width: 760px;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+}
+.name-mail div {
+  width: 360px;
+}
+.name-mail input {
+  padding: 0;
+  padding-left: 18px;
+  margin-top: 8px;
+  margin-bottom: 35px;
+  display: block;
+  width: 336px;
+  height: 44px;
+  letter-spacing: 0;
+}
+.hover-form {
+  background-color: #f2f2f2;
+  color: rgba(0, 0, 0, 0.4);
+  border: 3px solid #f2f2f2;
+}
+.hover-form:hover {
+  background-color: #eaeaea;
+  border: 3px solid #eaeaea;
+}
+.hover-form:focus {
+  outline: none;
+  border: 3px solid #f7e296;
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 1);
+}
+.hover-form:invalid {
+  /*background-color: #f6dada;*/
+}
+.feedback-popup textarea {
+  margin-top: 8px;
+  display: block;
+  width: 736px;
+  height: 136px;
+  padding: 0;
+  padding-left: 18px;
+  padding-top: 14px;
+  margin-bottom: 41px;
+}
+.feedback-popup .btn {
+  width: 200px;
+}
 /*Общие элементы модальных окон*/
 .popup-show {
   display: block;
@@ -735,32 +798,7 @@ li:nth-child(6) .popular-icon {
   opacity: 0.3;
 }
 
-
-
-
-
-
-
-
-
-
-.contacts img {
-  margin-top: 24px;
-  margin-bottom: 61px;
-}
-.info-contacts-wrapper .btn {
-  width: 260px;
-}
-.info-contacts-wrapper .black-line::before {
-  content: "";
-  position: absolute;
-  width: 80px;
-  height: 7px;
-  top: -8px;
-  background-color: #000000;
-}
-
-/*Футер*/
+/*Футер ------------------------------------------------------------------*/
 .page-footer {
   background-color: #464646;
   color: #ffffff;
@@ -897,21 +935,6 @@ li:nth-child(6) .popular-icon {
   background: url("../img/htmlacademy.png") no-repeat;
 }
 
-
-
-
-
-
-
-
-
-.write-us-window {
-  display: none;
-}
-
-
-
-
 /*------------------------------------------------------------------------------ Стили страницы каталога ---------------*/
 
 /*Основной блок страницы каталога*/
@@ -998,6 +1021,9 @@ li:nth-child(6) .popular-icon {
   padding-right: 73px;
   padding-top: 19px;
 }
+.filters .filter-header {
+  margin-left: 4px;
+}
 .filters-form {
   margin-top: 104px;
 }
@@ -1020,20 +1046,138 @@ li:nth-child(6) .popular-icon {
   top: -15px;
   background-color: #000000;
 }
-/*Стилизация фильтра-ползунка (пока затычка)*/
+/*Стилизация фильтра-ползунка*/
+.filter-price {
+  width: 200px;
+}
+.filter-range-wrapper {
+  position: relative;
+  margin-bottom: 6px;
+}
+.filter-range-bar {
+  width: 200px;
+  height: 2px;
+  margin-top: 35px;
+  background-color: #dbdbdb;
+}
+.filter-range-bar::before {
+  content: "";
+  position: absolute;
+  width: 115px;
+  height: 2px;
+  background-color: #91c92f;
+}
+.filter-range-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  background-color: #eeeeee;
+}
+.filter-range-handle.min {
+  left: -1px;
+  top: -5px;
+}
+.filter-range-handle.max {
+  left: 110px;
+  top: -5px;
+}
+.filter-range-handle:active {
+  background-color: #7eae29;
+  border-color: #ffffff;
+  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.75);
+}
+.filter-interval {
+  color: #dbdbdb;
+}
 .filter-interval input {
-  width: 100px;
+  font: inherit;
+  color: #dbdbdb;
+  border: none;
+  width: 65px;
+  background-color: transparent;
+}
+/*Стилизация фильтра цвета*/
+.filter-color input {
+  display: none;
+}
+.filter-color legend {
+  margin-bottom: 8px;
+}
+.filter-color li {
+  position: relative;
+  margin-bottom: 10px;
+}
+.filter-color svg {
+  position: absolute;
+  left: -34px;
+  top: 12px;
+  z-index: 5;
+  display: none;
+}
+.filter-color input:checked ~ svg {
+  display: block;
+}
+.filter-color label {
+  position: relative;
+}
+.filter-color label::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background-color: #dbdbdb;
+  left: -40px;
+  top: 0px;
+}
+/*Стилизация фильтра bluetooth*/
+.filter-bluetooth input {
+  display: none;
+}
+.filter-bluetooth legend {
+  margin-bottom: 8px;
+}
+.filter-bluetooth li {
+  margin-bottom: 10px;
+}
+.filter-bluetooth label {
+  position: relative;
+}
+.filter-bluetooth label::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #dbdbdb;
+  border-radius: 50%;
+  left: -40px;
+  top: 0px;
+}
+.filter-bluetooth label::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  left: -34px;
+  top: 6px;
+  display: none;
+}
+.filter-bluetooth input:checked ~ label::after {
+  display: block;
 }
 
 /*Отступы между полями фильтров*/
 .filter-price {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 .filter-color {
-  margin-bottom: 85px;
+  margin-bottom: 37px;
 }
 .filter-bluetooth {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .show-selected {
   width: 200px;
@@ -1051,17 +1195,45 @@ li:nth-child(6) .popular-icon {
   padding-top: 10px;
   /*background-color: rgba(255, 0, 0, 0.5);*/
 }
+
 .sort-property {
   display: flex;
   justify-content: space-between;
   width: 290px;
-  margin-right: 160px;
+  margin-right: 157px;
   letter-spacing: 0;
+}
+.sort-directions {
+  position: relative;
+  width: 60px;
+}
+.sort-directions .up,
+.sort-directions .down {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+}
+.sort-directions .up {
+  border-bottom-color: #000000;
+  top: -18px;
+  /*left: 1px;*/
+}
+.sort-directions .down {
+  border-top-color: #000000;
+  right: 0px;
+  top: -11px;
+}
+
+
+/*Дополнительный класс для активного состояния ссылки (для программиста)*/
+.sort-header a.active {
+  opacity: 1;
 }
 
 .selected-items {
   width: 760px;
-  /*padding-top: 120px;*/
   /*background-color: rgba(255, 0, 0, 0.5);*/
 }
 .item-cards {
@@ -1100,15 +1272,23 @@ li:nth-child(6) .popular-icon {
   margin-top: -10px;
   margin-bottom: 70px;
 }
-.page-nav a {
-  font: inherit;
+.page-nav .rewind {
+  width: 137px;
+  height: 70px;
+  text-align: center;
 }
-.page-nav .backward {
-  margin-left: 30px;
+.page-nav .rewind:hover {
+  background-color: #d9d9d9;
 }
-.page-nav .forward {
-  margin-right: 26px;
-  text-align: right;
+.page-nav .rewind:active {
+  background-color: #d9d9d9;
+  color: #acacac;
+}
+.forward a,
+.backward a {
+  color: inherit;
+  display: block;
+  margin-top: 24px;
 }
 .choose-page {
   margin-left: 30px;

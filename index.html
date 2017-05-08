@@ -317,50 +317,30 @@
       </div>
     </div>
 
-
     <!--Модальное окно с формой обратной связи-->
-    <div class="feedback-popup-structure popup-overlay popup-show">
-      <div class="feedback-popup">
-        <!-- <form action="/echo" method="post">
-          <label for="name">Ваше имя:</label>
-          <input type="text" placeholder="Представьтесь, пожалуйста" name="name" id="name" required>
-          <label for="email">Ваш e-mail:</label>
-          <input type="email" placeholder="Для отправки ответа" name="email" id="email" autocomplete="on" required>
-          <label for="letter">Текст письма:</label>
-          <textarea name="letter" id="letter">В свободной форме</textarea>
+    <div class="feedback-popup-structure popup-overlay">
+      <div class="feedback-popup gxb s18">
+        <form action="/echo" method="post">
+          <div class="name-mail">
+            <div>
+              <label for="name">Ваше имя:</label>
+              <input class="osl s14 hover-form" type="text" placeholder="Представьтесь, пожалуйста" name="name" id="name" required>
+            </div>
+            <div>
+              <label for="email">Ваш e-mail:</label>
+              <input class="osl s14 hover-form" type="email" placeholder="Для отправки ответа" name="email" id="email" autocomplete="on" required>
+            </div>
+          </div>
+          <div>
+            <label for="letter">Текст письма:</label>
+            <textarea class="osl s14 hover-form" name="letter" id="letter" placeholder="В свободной форме"></textarea>
+          </div>
           <button class="btn" type="submit">Отправить</button>
-        </form>-->
+        </form>
         <div class="close-button"></div>
       </div>
     </div>
 
-    <script>
-      // Открытие и закрытие модального окна с картой
-      var map_open = document.querySelector(".contacts img");
-      var bigmap = document.querySelector(".map-popup-structure");
-      var map_close = bigmap.querySelector(".close-button");
-      map_open.addEventListener("click", function(evt){
-        evt.preventDefault();
-        bigmap.classList.add("popup-show");
-      });
-      map_close.addEventListener("click", function(){
-        bigmap.classList.remove("popup-show");
-        // console.log("Клик по карте");
-      });
-
-      // Открытие и закрытие модального окна с формой обратной связи
-      var feedback_open = document.querySelector(".write-us");
-      var bigform = document.querySelector(".feedback-popup-structure");
-      var feedback_close = bigform.querySelector(".close-button");
-      feedback_open.addEventListener("click", function(evt){
-        evt.preventDefault();
-        bigform.classList.add("popup-show");
-      // console.log("Клик по кнопке");
-      });
-      feedback_close.addEventListener("click", function(){
-        bigform.classList.remove("popup-show");
-      });
-
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
