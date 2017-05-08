@@ -735,8 +735,9 @@ li:nth-child(6) .popular-icon {
   background-color: #ffffff;
   color: rgba(0, 0, 0, 1);
 }
-.hover-form:invalid {
-  /*background-color: #f6dada;*/
+.input-invalid {
+  border-color: #f6dada;
+  background-color: #f6dada;
 }
 .feedback-popup textarea {
   margin-top: 8px;
@@ -752,8 +753,14 @@ li:nth-child(6) .popular-icon {
   width: 200px;
 }
 /*Общие элементы модальных окон*/
+@keyframes arise {
+  0%    { transform: scale(0); }
+  100%  { transform: scale(1); }
+}
 .popup-show {
   display: block;
+  animation-name: arise;
+  animation-duration: 0.6s;
 }
 .popup-overlay {
   position: fixed;
@@ -762,7 +769,7 @@ li:nth-child(6) .popular-icon {
   width: 100%;
   height: 100%;
   z-index: 30;
-  background-color: rgba(0,0,0, 0.7);
+  background-color: rgba(0,0,0, 0);
 }
 .close-button {
   position: absolute;
@@ -1110,6 +1117,11 @@ li:nth-child(6) .popular-icon {
   margin-bottom: 10px;
 }
 .filter-color svg {
+  width: 14px;
+  height: 9px;
+  stroke: black;
+  stroke-width: 2;
+  fill: none;
   position: absolute;
   left: -34px;
   top: 12px;
@@ -1147,8 +1159,8 @@ li:nth-child(6) .popular-icon {
 .filter-bluetooth label::before {
   content: "";
   position: absolute;
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
   border: 2px solid #dbdbdb;
   border-radius: 50%;
   left: -40px;
@@ -1161,8 +1173,8 @@ li:nth-child(6) .popular-icon {
   height: 5px;
   border: 2px solid #000000;
   border-radius: 50%;
-  left: -34px;
-  top: 6px;
+  left: -33px;
+  top: 7px;
   display: none;
 }
 .filter-bluetooth input:checked ~ label::after {

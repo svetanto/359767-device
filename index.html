@@ -255,9 +255,9 @@
           <section class="contacts black-line">
             <h2 class="gxb s47">Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-            <a href="#"><img src="img/map-small.png" alt="Местоположение офиса" width="560" height="222"></a>
+            <a href="map-popup.html"><img src="img/map-small.png" alt="Местоположение офиса" width="560" height="222"></a>
             <!--Это ссылка, открывающая модальное окно с формой связи.-->
-            <a class="btn write-us" href="#">Напишите нам</a>
+            <a class="btn write-us" href="feedback-popup.html">Напишите нам</a>
           </section>
         </div>
 
@@ -313,6 +313,7 @@
 
     <div class="map-popup-structure popup-overlay">
       <div class="map-popup">
+        <iframe src="https://api-maps.yandex.ru/frame/v1/-/C6q0z2IH" width="960" height="559" frameborder="0"></iframe>
         <div class="close-button"></div>
       </div>
     </div>
@@ -320,15 +321,15 @@
     <!--Модальное окно с формой обратной связи-->
     <div class="feedback-popup-structure popup-overlay">
       <div class="feedback-popup gxb s18">
-        <form action="/echo" method="post">
+        <form action="echo" method="post">
           <div class="name-mail">
             <div>
               <label for="name">Ваше имя:</label>
-              <input class="osl s14 hover-form" type="text" placeholder="Представьтесь, пожалуйста" name="name" id="name" required>
+              <input class="osl s14 hover-form" type="text" placeholder="Представьтесь, пожалуйста" name="name" id="name">
             </div>
             <div>
               <label for="email">Ваш e-mail:</label>
-              <input class="osl s14 hover-form" type="email" placeholder="Для отправки ответа" name="email" id="email" autocomplete="on" required>
+              <input class="osl s14 hover-form" type="email" placeholder="Для отправки ответа" name="email" id="email" autocomplete="on">
             </div>
           </div>
           <div>
