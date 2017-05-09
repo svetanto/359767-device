@@ -20,37 +20,34 @@ var usermail = bigform.querySelector("[name=email]");
 var userletter = bigform.querySelector("[name=letter]");
 var form = bigform.querySelector("form");
 
-var username_storage = localStorage.getItem("username");
-var usermail_storage = localStorage.getItem("usermail");
-
+// var username_storage = localStorage.getItem("username");
+// var usermail_storage = localStorage.getItem("usermail");
 
 feedback_open.addEventListener("click", function(evt) {
   evt.preventDefault();
   bigform.classList.add("popup-show");
   username.focus();
-  if (username_storage) {
-    username.value = username_storage;
-    usermail.focus();
-  }
-  if (usermail_storage) {
-    usermail.value = usermail_storage;
-    userletter.focus();
-  }
-// console.log("Клик по кнопке");
+  // if (username_storage) {
+  // username.value = username_storage;
+  // usermail.focus();
+  // }
+  // if (usermail_storage) {
+  // usermail.value = usermail_storage;
+  // userletter.focus();
+  // }
+  // console.log("Клик по кнопке");
 });
 form.addEventListener("submit", function(evt) {
   if (!username.value) {
     evt.preventDefault();
     username.classList.add("input-invalid");
-  } else {
-    localStorage.setItem("username", username.value);
   }
+  // else {localStorage.setItem("username", username.value);}
   if (!usermail.value) {
     evt.preventDefault();
     usermail.classList.add("input-invalid");
-  } else {
-    localStorage.setItem("usermail", usermail.value);
   }
+  // else {localStorage.setItem("usermail", usermail.value);}
   if (!userletter.value) {
     evt.preventDefault();
     userletter.classList.add("input-invalid");
