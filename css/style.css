@@ -148,7 +148,7 @@ a {
   position: relative;
   background-color: #f7e296;
   margin-top: 40px;
-  padding-top: 42px;
+  padding-top: 44px;
 }
 /*Позиционирование логотипа на хедере*/
 .on-header-logo {
@@ -519,7 +519,7 @@ li:nth-child(6) .popular-icon {
 .services-slide {
   position: relative;
   width: 850px;
-  height: 319px;
+  height: 290px;
   margin-left: 277px;
   padding-left: 117px;
   padding-top: 30px;
@@ -833,6 +833,16 @@ li:nth-child(6) .popular-icon {
   display: flex;
   justify-content: space-between;
   font-size: 15px;
+}
+.catalog .device-logo {
+  /*position: relative;*/
+  display: block;
+  margin-top: -5px;
+  margin-bottom: 25px;
+}
+.catalog p {
+  display: block;
+  margin-top: 10px;
 }
 .left-footer {
   position: relative;
@@ -1218,8 +1228,8 @@ li:nth-child(6) .popular-icon {
   align-items: baseline;
   width: 760px;
   height: 50px;
-  margin-bottom: 78px;
-  padding-top: 10px;
+  margin-bottom: 80px;
+  padding-top: 8px;
 }
 
 .sort-property {
@@ -1288,7 +1298,7 @@ li:nth-child(6) .popular-icon {
   width: 360px;
   height: 380px;
   background-color: #eeeeee;
-  margin-bottom: 38px;
+  margin-bottom: 35px;
 }
 .item-card-overlay a {
   display: block;
@@ -1316,6 +1326,25 @@ a.add-to-comparelist {
   width: 80px;
   text-align: right;
 }
+/*Значок "NEW"*/
+.new-mark {
+  position: absolute;
+  top: 29px;
+  right: 27px;
+  width: 56px;
+  height: 56px;
+  border: 2px solid #cfcfcf;
+  border-radius: 50%;
+  color: #cfcfcf;
+  display: none;
+}
+.new-mark p {
+  margin-left: 14px;
+  margin-top: 21px;
+}
+.show-new-mark {
+  display: block;
+}
 
 /*Блок навигации по страницам выбранных товаров*/
 .page-nav {
@@ -1328,8 +1357,8 @@ a.add-to-comparelist {
   margin-bottom: 70px;
 }
 .page-nav .rewind {
-  width: 137px;
-  height: 70px;
+  width: 130px;
+  height: 71px;
   text-align: center;
 }
 .page-nav .rewind:hover {
