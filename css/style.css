@@ -79,6 +79,7 @@ a {
 .s47 {font-size: 47px;}
 .s48 {font-size: 48px;}
 /*Стили по трекингу*/
+.t0{letter-spacing: 0;}
 .t10{letter-spacing: 0.01em;}
 .t50{letter-spacing: 0.05em;}
 .t200{letter-spacing: 0.2em;}
@@ -435,6 +436,9 @@ nav ul {
 }
 .slide-text p {
   margin-top: -20px;
+}
+.slide-description {
+  width: 485px;
 }
 .slide-text .btn {
   margin-top: 28px;
