@@ -149,7 +149,7 @@ a {
   position: relative;
   background-color: #f7e296;
   margin-top: 40px;
-  padding-top: 44px;
+  padding-top: 40px;
 }
 /*Позиционирование логотипа на хедере*/
 .on-header-logo {
@@ -160,8 +160,11 @@ a {
 /*Оформление блока ссылок на хедере*/
 .upper-string {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   align-items: baseline;
+}
+.upper-string a {
+  line-height: 36px;
 }
 [class^="actions-"] {
   position: relative;
@@ -212,6 +215,7 @@ a {
   opacity: 0.5;
   font: inherit;
   height: 25px;
+  line-height: 36px;
 }
 .actions-search input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -254,6 +258,7 @@ a {
 }
 .actions-compare::before {
   left: -26px;
+  top: 10px;
   background-position: -32px;
 }
 .actions-cart {
@@ -262,6 +267,7 @@ a {
 }
 .actions-cart::before {
   left: -27px;
+  top: 10px;
   background-position: -48px;
 }
 /*Оформление блока главного меню на хедере*/
@@ -365,14 +371,14 @@ nav ul {
   z-index: 2;
 }
 .slider-controls label {
-    display: inline-block;
-    width: 4px;
-    height: 4px;
-    margin: 0 10px;
-    background-color: #ffffff;
-    border: 3px solid #c3c3c3;
-    border-radius: 50%;
-    cursor: pointer;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 10px;
+  background-color: #ffffff;
+  border: 3px solid #c3c3c3;
+  border-radius: 50%;
+  cursor: pointer;
 }
 #slide-switch1:checked ~ .slider-controls label[for="slide-switch1"],
 #slide-switch2:checked ~ .slider-controls label[for="slide-switch2"],
@@ -434,8 +440,8 @@ nav ul {
   background-color: #ffffff;
   z-index: 2;
 }
-.slide-text p {
-  margin-top: -20px;
+.slide-text h2 {
+  margin-bottom: 19px;
 }
 .slide-description {
   width: 485px;
@@ -448,7 +454,7 @@ nav ul {
   display: flex;
   padding: 0;
   list-style: none;
-  margin-top: 72px;
+  margin-top: 16px;
 }
 .slide-info li {
   width: 160px;
@@ -638,13 +644,15 @@ li:nth-child(6) .popular-icon {
 }
 .info ul {
   list-style: none;
-  margin-top: 77px;
+  margin-top: 67px;
   margin-left: -5px;
-  margin-bottom: 65px;
+  margin-bottom: 55px;
+  line-height: 40px;
+
 }
 .info li {
   position: relative;
-  margin-bottom: 21px;
+  margin-bottom: 0px;
 }
 .info li::before {
   content: "";
@@ -652,7 +660,7 @@ li:nth-child(6) .popular-icon {
   width: 4px;
   height: 4px;
   left: -35px;
-  top: 5px;
+  top: 15px;
   border: 3px solid #000000;
   border-radius: 50%;
 }
@@ -833,13 +841,12 @@ li:nth-child(6) .popular-icon {
   margin: 0;
   padding: 50px 0;
   width: 1160px;
-  min-height: 323px;
+  height: 223px;
   display: flex;
   justify-content: space-between;
   font-size: 15px;
 }
 .catalog .device-logo {
-  /*position: relative;*/
   display: block;
   margin-top: -5px;
   margin-bottom: 25px;
@@ -910,7 +917,7 @@ li:nth-child(6) .popular-icon {
 
 .right-footer {
   width: 330px;
-  padding-top: 15px;
+  padding-top: 10px;
   letter-spacing: 0;
   text-align: right;
 }
@@ -943,6 +950,7 @@ li:nth-child(6) .popular-icon {
 }
 .footer-actions .brighting {
   opacity: 0.7;
+  line-height: 36px;
 }
 .footer-not-logged .fading {
   margin-left: 0;
@@ -993,7 +1001,7 @@ li:nth-child(6) .popular-icon {
 }
 .catalog-upper-block h1 {
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 }
 .breadcrumbs {
   padding: 0;
@@ -1006,6 +1014,7 @@ li:nth-child(6) .popular-icon {
 }
 .breadcrumbs a,
 .breadcrumbs span {
+  line-height: 36px;
   opacity: 0.3;
 }
 .breadcrumbs a:hover {
@@ -1021,7 +1030,7 @@ li:nth-child(6) .popular-icon {
   width: 5px;
   height: 1px;
   left: -22px;
-  top: 10px;
+  top: 20px;
   background-color: #000000;
   transform: rotate(-45deg);
 }
@@ -1031,7 +1040,7 @@ li:nth-child(6) .popular-icon {
   width: 5px;
   height: 1px;
   left: -22px;
-  top:7px;
+  top: 17px;
   background-color: #000000;
   transform: rotate(45deg);
 }
