@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/style.pre.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <!--ХЕДЕР-->
@@ -36,7 +36,7 @@
             <li><a class="mainmenu-first hover-fading" href="#">Каталог товаров</a>
               <!--Вложенное меню, выпадающее при наведении на пункт "Каталог товаров"-->
               <div class="submenu-wrapper osl s15 t10 nt">
-                <ul class="submenu osl s15 t10 nt">
+                <ul class="submenu">
                   <li><a class="submenu-link hover-fading" href="#">Виртуальная реальность</a></li>
                   <li><a class="submenu-link hover-fading" href="catalog-monopodes.html">Моноподы для селфи</a></li>
                   <li><a class="submenu-link hover-fading" href="#">Экшн-камеры</a></li>
@@ -181,6 +181,24 @@
               <p>Квадрокоптеры</p>
             </a>
           </li>
+          <li>
+            <a href="#">
+              <div class="popular-bgr"></div>
+              <p>Квадрокоптеры</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="popular-bgr"></div>
+              <p>Квадрокоптеры</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="popular-bgr"></div>
+              <p>Квадрокоптеры</p>
+            </a>
+          </li>
         </ul>
 
       </div>
@@ -189,32 +207,30 @@
       <div class="services">
         <div class="container">
           <!--Блок слайдов услуг-->
-          <div class="services-slider">
-            <input class="services-slide-switch" type="radio" name="services-slide-switch" value="1" id="services-slide-switch1" checked>
-            <input class="services-slide-switch" type="radio" name="services-slide-switch" value="2" id="services-slide-switch2">
-            <input class="services-slide-switch" type="radio" name="services-slide-switch" value="3" id="services-slide-switch3">
-            <!--Блок меток для переключения слайдов услуг-->
-            <div class="services-slider-controls">
-              <label class="btn" for="services-slide-switch1">Доставка</label>
-              <label class="btn" for="services-slide-switch2">Гарантия</label>
-              <label class="btn" for="services-slide-switch3">Кредит</label>
-            </div>
-            <!--Слайды услуг-->
-            <div class="services-slides">
-              <div class="services-slide">
-                  <h2 class="gxb s47">Доставка</h2>
-                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-              </div>
-              <div class="services-slide">
-                  <h2 class="gxb s47">Гарантия</h2>
-                  <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. <br>Товар, не дом, конечно же.</p>
-              </div>
-              <div class="services-slide">
-                  <h2 class="gxb s47">Кредит</h2>
-                  <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-              </div>
-            </div>
+          <!--Невидимые радиобаттоны - переключатели слайдов-->
+          <input class="services-slide-switch" type="radio" name="services-slide-switch" value="1" id="services-slide-switch1" checked>
+          <input class="services-slide-switch" type="radio" name="services-slide-switch" value="2" id="services-slide-switch2">
+          <input class="services-slide-switch" type="radio" name="services-slide-switch" value="3" id="services-slide-switch3">
+
+          <!--Метки для переключения слайдов-->
+          <div class="services-slider-controls">
+            <label class="btn" for="services-slide-switch1">Доставка</label>
+            <label class="btn" for="services-slide-switch2">Гарантия</label>
+            <label class="btn" for="services-slide-switch3">Кредит</label>
           </div>
+          <!--Слайды услуг-->
+          <div class="services-slide services-slide1">
+              <h2 class="gxb s47">Доставка</h2>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </div>
+          <div class="services-slide services-slide2">
+              <h2 class="gxb s47">Гарантия</h2>
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. <br>Товар, не дом, конечно же.</p>
+          </div>
+          <div class="services-slide services-slide3">
+              <h2 class="gxb s47">Кредит</h2>
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия&nbspкредита. Выгодные для нашего банка, разумеется.</p>
+          </div>-->
         </div>
       </div>
 
