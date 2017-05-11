@@ -116,6 +116,7 @@ a {
   text-transform: uppercase;
   vertical-align: top;
   text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, transparent), color-stop(40%, #f0c52e), color-stop(60%, #f0c52e), color-stop(60%, transparent), to(transparent));
   background-image: linear-gradient(transparent 0%, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
   background-color: transparent;
   border: none;
@@ -135,11 +136,13 @@ a {
 }
 .btn.disabled:hover,
 .btn:disabled:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, transparent), color-stop(40%, #f0c52e), color-stop(60%, #f0c52e), color-stop(60%, transparent), to(transparent));
   background-image: linear-gradient(transparent 0%, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
   background-color: transparent;
 }
 .btn.disabled:active,
 .btn:disabled:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, transparent), color-stop(40%, #f0c52e), color-stop(60%, #f0c52e), color-stop(60%, transparent), to(transparent));
   background-image: linear-gradient(transparent 0%, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
   background-color: transparent;
   color: #000000;
@@ -159,16 +162,21 @@ a {
 }
 /*Оформление блока ссылок на хедере*/
 .upper-string {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 38px;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 .upper-string a {
   line-height: 36px;
 }
 [class^="actions-"] {
   position: relative;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   /*background-color: rgba(255, 0, 0, 0.5);*/
 }
 [class^="actions-"]::before {
@@ -275,8 +283,11 @@ nav ul {
   list-style: none;
 }
 .mainmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 0;
 }
 .mainmenu > li:nth-child(1) {
@@ -303,7 +314,8 @@ nav ul {
   right: -27px;
   top: 10px;
   background-color: #b8a974;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .mainmenu > li:nth-child(2) {
   margin-left: 321px;
@@ -327,6 +339,8 @@ nav ul {
 }
 /*Появление подменю*/
 .mainmenu > li:hover .submenu-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .submenu {
@@ -356,8 +370,12 @@ nav ul {
 .slides .slide {
   width: 1160px;
   height: 644px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   display: none;
 }
 
@@ -388,12 +406,18 @@ nav ul {
 /*------------------------------------------------------------------ Андрей, эти селекторы можно как-то попарно объединить?*/
 /*Показ слайдов по нажатию на радиокнопки*/
 #slide-switch1:checked ~ .slides .slide:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 #slide-switch2:checked ~ .slides .slide:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 #slide-switch3:checked ~ .slides .slide:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 /*Замена содержимого на псевдоэлементе - номере слайда*/
@@ -451,6 +475,8 @@ nav ul {
   width: 220px;
 }
 .slide-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0;
   list-style: none;
@@ -471,9 +497,14 @@ nav ul {
   margin: 0;
   padding: 0;
   width: 1160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
   margin-bottom: 53px;
 }
@@ -529,6 +560,7 @@ li:nth-child(6) .popular-bgr::before {
 }
 .services {
   height: 388px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(26%, transparent), color-stop(26%, #e5e5e5), to(#e5e5e5));
   background-image: linear-gradient(transparent 0%, transparent 26%, #e5e5e5 26%, #e5e5e5 100%);
   margin-bottom: 95px;
 }
@@ -598,8 +630,12 @@ li:nth-child(6) .popular-bgr::before {
   margin: 0;
   padding: 0;
   width: 1160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 100px;
 }
 .logotype {
@@ -629,8 +665,12 @@ li:nth-child(6) .popular-bgr::before {
   padding: 0;
   width: 1160px;
   min-height: 585px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 61px;
 }
 .info-contacts-wrapper .info {
@@ -701,7 +741,8 @@ li:nth-child(6) .popular-bgr::before {
   margin-top: -280px;
   z-index: 20;
   background-image: url("../img/map-big.png");
-  box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
+          box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
 }
 .map-popup .close-button {
   top: 22px;
@@ -723,7 +764,8 @@ li:nth-child(6) .popular-bgr::before {
   margin-top: -280px;
   z-index: 20;
   background-color: #ffffff;
-  box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
+          box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
   letter-spacing: 0;
 }
 .feedback-popup .close-button {
@@ -733,8 +775,12 @@ li:nth-child(6) .popular-bgr::before {
 .name-mail {
   padding: 0;
   width: 760px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border: none;
 }
 .name-mail div {
@@ -785,14 +831,20 @@ li:nth-child(6) .popular-bgr::before {
 /*Общие элементы модальных окон*/
 
 /*Анимация появления модальных окон*/
+@-webkit-keyframes arise {
+  0%    { -webkit-transform: scale(0); transform: scale(0); }
+  100%  { -webkit-transform: scale(1); transform: scale(1); }
+}
 @keyframes arise {
-  0%    { transform: scale(0); }
-  100%  { transform: scale(1); }
+  0%    { -webkit-transform: scale(0); transform: scale(0); }
+  100%  { -webkit-transform: scale(1); transform: scale(1); }
 }
 .popup-show {
   display: block;
-  animation-name: arise;
-  animation-duration: 0.6s;
+  -webkit-animation-name: arise;
+          animation-name: arise;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 /*Слой, закрывающий основной контент страницы под модальным окном*/
 .popup-overlay {
@@ -824,10 +876,12 @@ li:nth-child(6) .popular-bgr::before {
   background-color: #ffffff;
 }
 .close-button::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .close-button::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .close-button:hover,
 .close-button:active {
@@ -848,8 +902,12 @@ li:nth-child(6) .popular-bgr::before {
   padding: 50px 0;
   width: 1160px;
   height: 223px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 15px;
 }
 .catalog .device-logo {
@@ -884,8 +942,12 @@ li:nth-child(6) .popular-bgr::before {
   padding-top: 70px;
 }
 .center-footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style: none;
   padding: 0;
 }
@@ -893,8 +955,12 @@ li:nth-child(6) .popular-bgr::before {
   color: #ffffff;
 }
 .footer-social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 147px;
   margin-top: 56px;
   margin-left: auto;
@@ -1005,6 +1071,8 @@ a.footer-cart::before {
 }
 .breadcrumbs {
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
@@ -1032,7 +1100,8 @@ a.footer-cart::before {
   left: -22px;
   top: 20px;
   background-color: #000000;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .breadcrumbs li:not(:first-child)::after {
   content: "";
@@ -1042,14 +1111,18 @@ a.footer-cart::before {
   left: -22px;
   top: 17px;
   background-color: #000000;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 
 /*Обертка блока фильтров и выбранных товаров с градиентным фоном*/
 .main-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
+  background-image: -webkit-gradient(linear, left top, right top, from(#eeeeee), color-stop(30%, #eeeeee), color-stop(30%, #ffffff), to(#ffffff));
   background-image: linear-gradient(to right, #eeeeee 0%, #eeeeee 30%, #ffffff 30%, #ffffff 100%);
 }
 /*Полупрозрачная полоска для заголовка фильтра и кнопок блока выбранных товаров*/
@@ -1062,8 +1135,12 @@ a.footer-cart::before {
 }
 /*Блок фильтров и выбранных товаров*/
 .main-wrapper .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .filters {
@@ -1140,7 +1217,8 @@ a.footer-cart::before {
 .filter-range-handle:active {
   background-color: #7eae29;
   border-color: #ffffff;
-  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.75);
 }
 .filter-interval {
   color: #dbdbdb;
@@ -1236,9 +1314,15 @@ a.footer-cart::before {
 /*Блок сортировки*/
 
 .sort-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   width: 760px;
   height: 50px;
   margin-bottom: 80px;
@@ -1246,8 +1330,12 @@ a.footer-cart::before {
 }
 
 .sort-property {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 290px;
   margin-right: 157px;
   letter-spacing: 0;
@@ -1289,9 +1377,14 @@ a.footer-cart::before {
   width: 760px;
 }
 .item-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0;
   margin-bottom: 0px;
 }
@@ -1329,8 +1422,12 @@ a.add-to-comparelist {
   left: 80px;
 }
 .item-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .item-name {
   width: 260px;
@@ -1361,10 +1458,16 @@ a.add-to-comparelist {
 
 /*Блок навигации по страницам выбранных товаров*/
 .page-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 70px;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #eeeeee;
   margin-top: -10px;
   margin-bottom: 70px;
@@ -1389,8 +1492,12 @@ a.add-to-comparelist {
 }
 .choose-page {
   margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .nav-btn {
   width: 38px;
