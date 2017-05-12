@@ -160,7 +160,7 @@ a {
 /*Оформление блока ссылок на хедере*/
 .upper-string {
   display: flex;
-  margin-bottom: 38px;
+  margin-bottom: 23px;
   align-items: baseline;
 }
 .upper-string a {
@@ -169,7 +169,6 @@ a {
 [class^="actions-"] {
   position: relative;
   flex-shrink: 0;
-  /*background-color: rgba(255, 0, 0, 0.5);*/
 }
 [class^="actions-"]::before {
   content: "";
@@ -182,7 +181,6 @@ a {
 .actions-search {
   width: 440px;
   margin-left: 97px;
-  /*background-color: rgba(255, 0, 0, 0.5);*/
 }
 .submit-string-button {
   position: absolute;
@@ -285,7 +283,7 @@ nav ul {
   margin-right: 20px;
 }
 .mainmenu li {
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 /*Плюс на псевдоэлементах после первого пункта меню*/
 .mainmenu-first {
@@ -477,7 +475,7 @@ nav ul {
   padding: 0;
   width: 1160px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   list-style: none;
   margin-bottom: 53px;
@@ -486,6 +484,11 @@ nav ul {
   width: 160px;
   height: 240px;
   margin-bottom: 30px;
+  margin-right: 40px;
+}
+.popular li:nth-child(6n),
+.popular li:last-child {
+  margin-right: 0;
 }
 .popular-bgr {
   position: relative;
@@ -616,7 +619,7 @@ li:nth-child(6) .popular-bgr::before {
   width: 1160px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 100px;
   /*background-color: rgba(255, 0, 0, 0.5);*/
 }
@@ -625,6 +628,11 @@ li:nth-child(6) .popular-bgr::before {
   width: 260px;
   height: 100px;
   font-size: 0;
+  margin-right: 40px;
+}
+.logotype:nth-child(4n),
+.logotype:last-child {
+  margin-right: 0;
 }
 .logotype.dji {
   background: url("../img/dji-sprite.png") no-repeat;
@@ -904,7 +912,7 @@ li:nth-child(6) .popular-bgr::before {
 }
 .center-footer ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
@@ -920,6 +928,14 @@ li:nth-child(6) .popular-bgr::before {
   margin-left: auto;
   margin-right: auto;
 }
+.footer-menu li {
+  margin-right: 32px;
+}
+.footer-menu li:nth-child(3n),
+.footer-menu li:last-child {
+  margin-right: 0;
+}
+
 .footer-social a {
   display: inline-block;
   font-size: 0;
